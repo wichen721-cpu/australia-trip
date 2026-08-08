@@ -1,0 +1,2730 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>澳洲之旅 2026｜伯斯 + 墨爾本</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ocean: #1B6CA8;
+    --ocean-light: #E8F3FB;
+    --coral: #E8622A;
+    --coral-light: #FDF0EA;
+    --sand: #F7F3EC;
+    --eucalyptus: #4A7C59;
+    --eucalyptus-light: #EBF3EE;
+    --dusk: #7B5EA7;
+    --dusk-light: #F2EEF9;
+    --warm-dark: #2C2416;
+    --mid: #6B6155;
+    --border: #E5DDD0;
+    --white: #FFFFFF;
+    --tag-flight: #DCEEFB;
+    --tag-flight-text: #0C447C;
+    --tag-hotel: #D6EDDE;
+    --tag-hotel-text: #1B5E35;
+    --tag-car: #FCE8D5;
+    --tag-car-text: #7A3810;
+    --tag-activity: #EBE6F7;
+    --tag-activity-text: #4A2E8C;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--sand);
+    color: var(--warm-dark);
+    line-height: 1.6;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0D3F6E 0%, #1B6CA8 40%, #E8622A 100%);
+    padding: 64px 24px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 16px;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .hero-subtitle {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 32px;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+  }
+  .hero-stat-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  .hero-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255,255,255,0.25);
+    align-self: center;
+  }
+
+  /* NAV TABS */
+  .nav-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    overflow-x: auto;
+  }
+  .nav-tab {
+    padding: 14px 24px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--mid);
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .nav-tab:hover { color: var(--warm-dark); }
+  .nav-tab.active { color: var(--ocean); border-bottom-color: var(--ocean); }
+
+  /* MAIN CONTENT */
+  .container { max-width: 780px; margin: 0 auto; padding: 0 20px 80px; }
+
+  /* SECTION HEADER */
+  .section-hero {
+    margin: 40px 0 24px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+  .section-hero-perth { background: linear-gradient(135deg, #0D3F6E, #1B6CA8); }
+  .section-hero-mel { background: linear-gradient(135deg, #2D5A3D, #4A7C59); }
+  .section-hero-inner {
+    padding: 32px 28px;
+    position: relative;
+  }
+  .section-hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 6px;
+  }
+  .section-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .section-hero-dates {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+  }
+  .section-hero-icon {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 56px;
+    opacity: 0.2;
+  }
+
+  /* DAY CARDS */
+  .day-card {
+    background: var(--white);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .day-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .day-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+  .day-num-date { font-size: 18px; line-height: 1; }
+  .day-num-mon { font-size: 10px; opacity: 0.75; text-transform: uppercase; letter-spacing: 0.5px; }
+  .day-meta { flex: 1; min-width: 0; }
+  .day-title { font-size: 14px; font-weight: 600; color: var(--warm-dark); }
+  .day-sub { font-size: 12px; color: var(--mid); margin-top: 2px; }
+  .day-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 5px; }
+  .tag {
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .tag-flight { background: var(--tag-flight); color: var(--tag-flight-text); }
+  .tag-hotel { background: var(--tag-hotel); color: var(--tag-hotel-text); }
+  .tag-car { background: var(--tag-car); color: var(--tag-car-text); }
+  .tag-activity { background: var(--tag-activity); color: var(--tag-activity-text); }
+  .day-chevron {
+    font-size: 16px;
+    color: var(--mid);
+    transition: transform 0.25s;
+    flex-shrink: 0;
+  }
+  .day-card.open .day-chevron { transform: rotate(180deg); }
+
+  .day-body {
+    display: none;
+    border-top: 1px solid var(--border);
+    padding: 0;
+  }
+  .day-card.open .day-body { display: block; }
+
+  /* TIMELINE */
+  .timeline { padding: 16px 18px 8px; }
+  .tl-item { display: flex; gap: 14px; margin-bottom: 18px; position: relative; }
+  .tl-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 46px;
+    top: 24px;
+    bottom: -14px;
+    width: 1.5px;
+    background: var(--border);
+  }
+  .tl-time {
+    width: 36px;
+    font-size: 11px;
+    color: var(--mid);
+    text-align: right;
+    padding-top: 3px;
+    flex-shrink: 0;
+    line-height: 1.3;
+  }
+  .tl-dot-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 18px;
+  }
+  .tl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+  .tl-content { flex: 1; }
+  .tl-title { font-size: 13px; font-weight: 600; color: var(--warm-dark); line-height: 1.4; }
+  .tl-detail { font-size: 12px; color: var(--mid); margin-top: 3px; line-height: 1.55; }
+
+  /* INFO BOXES */
+  .info-section { padding: 4px 18px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .info-box {
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .info-box-title {
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .info-tip { background: #FFF8E6; color: #7A5010; }
+  .info-tip .info-box-title { color: #9A6010; }
+  .info-warn { background: #FEF0EB; color: #8B3515; }
+  .info-warn .info-box-title { color: #A03010; }
+  .info-food { background: #F0F7F2; color: #2A5E3A; }
+  .info-food .info-box-title { color: #1F4A2D; }
+  .info-nearby { background: #EEF2FD; color: #2A3E7A; }
+  .info-nearby .info-box-title { color: #1E3070; }
+  .info-box ul { padding-left: 16px; margin-top: 4px; }
+  .info-box li { margin-bottom: 3px; }
+
+  /* COST SUMMARY */
+  .cost-section {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    margin-top: 40px;
+  }
+  .cost-header {
+    background: linear-gradient(135deg, #2C2416, #4A3828);
+    padding: 20px 24px;
+  }
+  .cost-header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 2px;
+  }
+  .cost-header-sub { font-size: 12px; color: rgba(255,255,255,0.6); }
+  .cost-table { padding: 16px 24px; }
+  .cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .cost-row:last-child { border-bottom: none; }
+  .cost-label { color: var(--mid); display: flex; align-items: center; gap: 8px; }
+  .cost-amount { font-weight: 600; color: var(--warm-dark); }
+  .cost-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--sand);
+    border-top: 2px solid var(--border);
+  }
+  .cost-total-label { font-weight: 600; font-size: 14px; }
+  .cost-total-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--coral);
+  }
+  .cost-note { padding: 10px 24px 16px; font-size: 11px; color: var(--mid); }
+
+  /* CHECKLIST */
+  .checklist-section {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    margin-top: 16px;
+    overflow: hidden;
+  }
+  .checklist-header {
+    background: linear-gradient(135deg, #1B6CA8, #0D3F6E);
+    padding: 20px 24px;
+  }
+  .checklist-header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: #fff;
+  }
+  .checklist-body { padding: 16px 24px; display: flex; flex-direction: column; gap: 10px; }
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    padding: 10px 12px;
+    background: var(--sand);
+    border-radius: 8px;
+  }
+  .check-box {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1.5px solid var(--border);
+    flex-shrink: 0;
+    margin-top: 1px;
+    cursor: pointer;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+  }
+  .check-box.checked { background: var(--eucalyptus); border-color: var(--eucalyptus); }
+  .check-box.checked::after { content: '✓'; color: white; font-size: 11px; font-weight: 700; }
+  .check-label { flex: 1; line-height: 1.5; }
+  .check-label strong { display: block; font-weight: 600; }
+  .check-label span { font-size: 11px; color: var(--mid); }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 12px;
+    color: var(--mid);
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  /* section visibility */
+  .trip-section { display: none; }
+  .trip-section.active { display: block; }
+
+  @media (max-width: 480px) {
+    .hero { padding: 48px 16px 40px; }
+    .hero-stats { gap: 16px; }
+    .hero-divider { display: none; }
+    .container { padding: 0 12px 60px; }
+    .section-hero-icon { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">旅遊行程規劃 · 2026年10月</div>
+  <div class="hero-title">澳洲｜伯斯＋墨爾本</div>
+  <div class="hero-subtitle">Wiwi & 2 位旅伴 · 10月7日—10月24日</div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="hero-stat-num">18</span>
+      <span class="hero-stat-label">晚住宿</span>
+    </div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">5</span>
+      <span class="hero-stat-label">段航班</span>
+    </div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">2</span>
+      <span class="hero-stat-label">段租車</span>
+    </div>
+    <div class="hero-divider"></div>
+    <div class="hero-stat">
+      <span class="hero-stat-num">3</span>
+      <span class="hero-stat-label">位旅客</span>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav-sticky">
+  <button class="nav-tab active" onclick="switchSection('perth', this)">🦘 伯斯段</button>
+  <button class="nav-tab" onclick="switchSection('mel', this)">☕ 墨爾本段</button>
+  <button class="nav-tab" onclick="switchSection('summary', this)">📋 費用 & 待辦</button>
+  <button class="nav-tab" onclick="switchSection('expense', this)">💸 記帳</button>
+</nav>
+
+<div class="container">
+
+<!-- ===================== PERTH ===================== -->
+<div id="perth" class="trip-section active">
+  <div class="section-hero section-hero-perth">
+    <div class="section-hero-inner">
+      <div class="section-hero-eyebrow">Western Australia</div>
+      <div class="section-hero-title">珀斯 · 伯斯</div>
+      <div class="section-hero-dates">10月7日（三）— 10月13日（二）｜6晚</div>
+    </div>
+    <div class="section-hero-icon">🌊</div>
+  </div>
+
+  <!-- Day 10/7 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#E8F3FB;color:#0C447C;">
+        <span class="day-num-date">7</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/7（三）出發日 — 台北 → 香港 → 珀斯</div>
+        <div class="day-sub">國泰航空｜轉機香港</div>
+        <div class="day-tags"><span class="tag tag-flight">✈️ 出發航班</span></div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">19:15</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">CX565 台北（TPE）起飛</div>
+            <div class="tl-detail">國泰航空 — 3位旅客</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">21:10</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">抵達香港（HKG）轉機</div>
+            <div class="tl-detail">等待約2小時</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">23:15</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">CX143 香港 → 珀斯起飛</div>
+            <div class="tl-detail">國泰航空 — 抵達隔天 06:50</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-tip">
+          <div class="info-box-title">💡 轉機小提醒</div>
+          記得提前辦好澳洲 ETA 電子簽（Australian ETA App，AUD $20）。香港轉機約2小時，不用出境。飛機上食物建議吃完，澳洲入境嚴禁攜帶食物！
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/8 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#E8F3FB;color:#0C447C;">
+        <span class="day-num-date">8</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/8（四）抵達珀斯 — 機場取車 → 袋鼠島 → Kings Park → 費里曼特</div>
+        <div class="day-sub">Airbnb（房東 Michael）｜23 Adelaide St, Fremantle｜機場取租車</div>
+        <div class="day-tags">
+          <span class="tag tag-flight">✈️ 抵達</span>
+          <span class="tag tag-car">🚗 取車</span>
+          <span class="tag tag-hotel">🏠 入住</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">06:50</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">✈️ 抵達珀斯國際機場（PER）</div>
+            <div class="tl-detail">入境辦理約30-40分鐘。嚴禁攜帶任何食物入境！</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">08:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#E8622A"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🚗 機場取租車（行李放車上）</div>
+            <div class="tl-detail">租至 10/13 還車，行李全程放車上，不需先繞去費里曼特</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">09:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">費里曼特漁人碼頭早午餐</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=Cicerello%27s%20Fremantle" target="_blank" style="color:inherit;text-decoration:underline dotted;">Cicerello's</a> 炸魚薯條 或 <a href="https://www.google.com/maps/search/?api=1&query=Bread%20in%20Common%20Fremantle" target="_blank" style="color:inherit;text-decoration:underline dotted;">Bread in Common</a> 早午餐</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">10:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">費里曼特市區散步</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=Fremantle%20Prison" target="_blank" style="color:inherit;text-decoration:underline dotted;">費里曼特監獄</a>外觀、<a href="https://www.google.com/maps/search/?api=1&query=WA%20Maritime%20Museum%20Fremantle" target="_blank" style="color:inherit;text-decoration:underline dotted;">WA Maritime Museum</a>（免費）、漁人碼頭港口</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">15:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🏠 Airbnb 辦入住，梳洗休息</div>
+            <div class="tl-detail">房東 Michael｜23 Adelaide St, Fremantle</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">16:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🦘 <a href="https://www.google.com/maps/search/?api=1&query=Heirisson%20Island%20Perth" target="_blank" style="color:inherit;text-decoration:underline dotted;">Heirisson Island 袋鼠島</a></div>
+            <div class="tl-detail">周杰倫 MV 朝聖！傍晚 16:00-18:00 袋鼠最活躍，完全免費<br>從 Elizabeth Quay 沿河步行可達</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">17:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Kings%20Park%20Botanic%20Garden%20Perth" target="_blank" style="color:inherit;text-decoration:underline dotted;">Kings Park & Botanic Garden</a> 黃昏</div>
+            <div class="tl-detail">Federation Walkway 高架步道，俯瞰伯斯天際線與 Swan River，黃昏光線最美</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">19:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">返回費里曼特晚餐</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=Little%20Creatures%20Brewery%20Fremantle" target="_blank" style="color:inherit;text-decoration:underline dotted;">Little Creatures Brewery</a> — 精釀啤酒配海鮮，費里曼特最著名餐廳</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-warn">
+          <div class="info-box-title">⚠️ 注意</div>
+          前一晚紅眼班機幾乎沒睡，15:00入住後建議小睡一下再出發，體力才撐得住後面幾天！
+        </div>
+        <div class="info-box info-warn">
+          <div class="info-box-title">🚗 靠左駕駛第一天！</div>
+          取車後先在機場停車場繞兩圈熟悉：方向燈和雨刷撥桿位置與台灣相反、圓環讓右方來車先行、時速嚴格抓（測速相機超多）。副駕幫忙提醒「靠左靠左」！
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">🅿️ 今日停車攻略</div>
+          <ul>
+            <li><strong>Kings Park</strong> — 園內免費停車！Fraser Ave 沿線車位多</li>
+            <li><strong>Heirisson Island</strong> — 橋邊有小停車場，免費</li>
+            <li><strong>費里曼特市區</strong> — 路邊咪表計費，餐廳周邊晚上多免費</li>
+          </ul>
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🏛️ Kings Park 冷知識</div>
+          全球最大市中心公園之一（比紐約中央公園還大！），也是西澳戰爭紀念碑所在。原住民 Noongar 族稱此地 <strong>Kaarta Gar-up</strong>，數千年來是重要聚會聖地。State War Memorial 旁的長明火焰值得駐足。
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🦜 Kings Park 鸚鵡目擊點</div>
+          黃昏時分留意 Marri 樹上的 <strong>Carnaby's 黑鳳頭鸚鵡</strong>（西澳特有種！）和彩虹鸚鵡，Bushland Nature Trail 目擊率最高。順路免費，記得抬頭看！
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🍽️ 費里曼特必吃補充</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Gino%27s%20Fremantle" target="_blank" style="color:inherit;">Gino's</a></strong> — 1983年老店，卡布奇諾之城的代表咖啡廳</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Kakulas%20Sister%20Fremantle" target="_blank" style="color:inherit;">Kakulas Sister</a></strong> — 百年香料乾貨行，伴手禮挖寶</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=South%20Beach%20Fremantle" target="_blank" style="color:inherit;">South Beach</a></strong> — 當地人最愛海灘，夕陽超美</li>
+          </ul>
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">💡 Elizabeth Quay 留到南珀斯再去</div>
+          10/11、10/12 住南珀斯，Elizabeth Quay 離南珀斯只要10-15分鐘，晚上夜景更漂亮，留到那幾天的晚餐去更值得！
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/9 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#EBE6F7;color:#4A2E8C;">
+        <span class="day-num-date">9</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/9（五）羅特尼斯島全日遊</div>
+        <div class="day-sub">Pedal & Flipper 電動腳踏車 ×3｜訂單 #260319357｜晚上逛 Fremantle Market</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🚲 已訂活動</span>
+          <span class="tag tag-hotel">🏠 費里曼特住</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">早上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">從費里曼特搭渡輪前往羅特尼斯島</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=B%20Shed%20Ferry%20Terminal%20Fremantle" target="_blank" style="color:inherit;text-decoration:underline dotted;">B Shed Ferry Terminal</a> 出發｜渡輪票需提前購買！</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">08:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">✅ Pedal & Flipper 取電動腳踏車（已訂）</div>
+            <div class="tl-detail">電動腳踏車 ×3 + 籃子 ×3｜AUD $255（已付）｜訂單 #260319357</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">全天</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">騎車環島探索 Quokka！</div>
+            <div class="tl-detail">The Basin 游泳、Little Salmon Bay 浮潛、Wadjemup Lighthouse 騎車上去俯瞰全島<br>Quokka 拍照技巧：蹲低不要追，牠們會自己靠近！</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">16:01</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">還腳踏車，搭渡輪返回費里曼特</div>
+            <div class="tl-detail"></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">17:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🛍️ <a href="https://www.google.com/maps/search/?api=1&query=Fremantle%20Markets" target="_blank" style="color:inherit;text-decoration:underline dotted;">Fremantle Market 逛市集</a></div>
+            <div class="tl-detail">週五開到 20:00！文創、美食、伴手禮一次搞定</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">20:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">費里曼特晚餐</div>
+            <div class="tl-detail">市集周邊有很多選擇</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-warn">
+          <div class="info-box-title">🅿️ B Shed 碼頭整修中！</div>
+          碼頭周邊道路封閉、車位有限。建議停費里曼特市區停車場（如 <a href="https://www.google.com/maps/search/?api=1&query=Queensgate%20Car%20Park%20Fremantle" target="_blank" style="color:inherit;text-decoration:underline dotted;">Queensgate</a>）步行前往，比平常多留20分鐘。
+        </div>
+        <div class="info-box info-warn">
+          <div class="info-box-title">🦘 Quokka 守則（很重要！）</div>
+          禁止觸摸、餵食 Quokka — 罰款可達 AUD $150+，島上有巡邏。自拍技巧：蹲低、手機放地面高度、保持不動，好奇的 Quokka 會自己湊過來。微笑袋鼠自然入鏡！
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🏛️ Wadjemup 的雙面歷史</div>
+          Rottnest 原住民名為 <strong>Wadjemup</strong>（「隔水之地」）。1838-1931年曾是原住民監獄，約4000人被囚禁於此。島上 Wadjemup Museum 與紀念地訴說這段歷史，參觀時請保持尊重。荷蘭探險家1696年誤認 Quokka 為大老鼠，才取名「Rottnest（鼠窩）」。
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🍱 島上飲食建議</div>
+          建議從費里曼特帶三明治和水，島上餐廳偏貴。Thomson Bay Settlement 的 <a href="https://www.google.com/maps/search/?api=1&query=Dome%20Cafe%20Rottnest%20Island" target="_blank" style="color:inherit;text-decoration:underline dotted;">Dome Cafe</a> 可補充咖啡輕食。
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">📍 羅特尼斯島必去點位</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=The%20Basin%20Rottnest%20Island" target="_blank" style="color:inherit;">The Basin</a></strong> — 天然澙湖游泳池，全島最美</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Little%20Salmon%20Bay%20Rottnest" target="_blank" style="color:inherit;">Little Salmon Bay</a></strong> — 浮潛步道，水下解說牌</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Wadjemup%20Lighthouse%20Rottnest" target="_blank" style="color:inherit;">Wadjemup Lighthouse</a></strong> — 島中央燈塔，360度視野</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Cathedral%20Rocks%20Rottnest%20Island" target="_blank" style="color:inherit;">Cathedral Rocks</a></strong> — 西端海獅棲息地，運氣好可看到！</li>
+          </ul>
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">🛍️ Fremantle Market 必買</div>
+          晚上市集必掃：袋鼠皮製品、澳洲蜂蜜、手工皂、原住民藝術小物、當季水果（現場吃）
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/10 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#FCE8D5;color:#7A3810;">
+        <span class="day-num-date">10</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/10（六）北上 — 尖峰石陣 → 海獅共游 → 粉紅湖 → 傑拉爾頓</div>
+        <div class="day-sub">06:30 出發｜機場租車使用中</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🦭 海獅共游</span>
+          <span class="tag tag-hotel">🏨 傑拉爾頓住</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">06:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#E8622A"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">費里曼特出發北上（Indian Ocean Drive）</div>
+            <div class="tl-detail">沿海公路景色絕美，隨時可停車拍照</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">08:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🪨 <a href="https://www.google.com/maps/search/?api=1&query=The%20Pinnacles%20Desert%20Cervantes" target="_blank" style="color:inherit;text-decoration:underline dotted;">尖峰石陣（The Pinnacles）</a></div>
+            <div class="tl-detail">開車繞 4.5km 石陣拍照，約1小時｜入園費 AUD $17/車<br>千年石灰岩柱從金色沙地中聳立，如外星景觀！</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">09:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">出發 Jurien Bay（30分鐘）</div>
+            <div class="tl-detail"></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">10:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🦭 <a href="https://www.google.com/maps/search/?api=1&query=Jurien%20Bay%20sea%20lion%20swim%20tour" target="_blank" style="color:inherit;text-decoration:underline dotted;">Jurien Bay 野生海獅共游</a></div>
+            <div class="tl-detail">⚠️ 09:15 前到達 Jurien Bay Boat Harbour！09:30 出發，約2小時<br>AUD $568.88（已付）｜訂單 R1PMFLA｜Turquoise Safaris<br>全球少數可與野生海獅一起游泳的地方！</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">12:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">結束，沖澡換衣，繼續北上</div>
+            <div class="tl-detail">往傑拉爾頓約2小時車程</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">15:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">傑拉爾頓午餐</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=Foreshore%20Cafe%20Geraldton" target="_blank" style="color:inherit;text-decoration:underline dotted;">Foreshore Cafe</a> — 當地秘密推薦，超新鮮龍蝦三明治</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">15:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">出發粉紅湖（約1小時）</div>
+            <div class="tl-detail">往 Port Gregory 方向</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">16:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#E8622A"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🌸 <a href="https://www.google.com/maps/search/?api=1&query=Hutt%20Lagoon%20Pink%20Lake%20Port%20Gregory" target="_blank" style="color:inherit;text-decoration:underline dotted;">Hutt Lagoon 粉紅湖</a></div>
+            <div class="tl-detail">Barbie 粉！免費｜帶礁靴或舊鞋，鹽晶較尖<br>從橋上拍或進樹林旁找角度效果最好</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">17:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🏨 返回傑拉爾頓入住</div>
+            <div class="tl-detail">卡羅文公園比萊爾酒店（Booking）｜463 Marine Terrace, Geraldton｜入住 14:00-18:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-warn">
+          <div class="info-box-title">⛽🦘 自駕重要提醒</div>
+          出發前<strong>加滿油</strong>！Indian Ocean Drive 加油站稀少（Jurien Bay、Geraldton 可補）。清晨傍晚<strong>注意路上袋鼠</strong>——這是澳洲自駕最大風險，見到動物減速直行、切勿急轉閃避。
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">🌊 海獅共游準備清單</div>
+          毛巾、換洗衣物、防水袋、暈船藥（怕暈的話提前30分鐘吃）。防寒衣船家提供。相機用 GoPro 或防水殼，海獅超愛鏡頭！
+        </div>
+        <div class="info-box info-warn">
+          <div class="info-box-title">⚠️ 海獅共游集合時間</div>
+          集合時間 09:30，從費里曼特 06:30 出發，尖峰石陣停留1小時後剛好 09:30 抵達 Jurien Bay。務必提前預約！
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">💡 尖峰石陣購票</div>
+          建議提前在 exploreparks.dbca.wa.gov.au 線上購票，到場直接進，不用擔心現場收費問題。
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🦞 Cervantes 必吃 — 龍蝦工廠！</div>
+          <strong><a href="https://www.google.com/maps/search/?api=1&query=Lobster%20Shack%20Cervantes" target="_blank" style="color:inherit;">Lobster Shack</a></strong> — 尖峰石陣旁的著名龍蝦工廠餐廳，半隻龍蝦餐約 AUD $40-50，海景座位！如果海獅共游後肚子餓，回頭15分鐘就到（在 Jurien Bay 南邊）。<br>網站：lobstershack.com.au
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">📍 傑拉爾頓周邊加碼</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=HMAS%20Sydney%20II%20Memorial%20Geraldton" target="_blank" style="color:inherit;">HMAS Sydney II 紀念碑</a></strong> — 黃昏時分最美，俯瞰海岸</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Geraldton%20Esplanade" target="_blank" style="color:inherit;">Geraldton Esplanade</a></strong> — 海濱步道晚餐後散步</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/11 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#EBE6F7;color:#4A2E8C;">
+        <span class="day-num-date">11</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/11（日）Kalbarri 全攻略 → 尖峰石陣日落 → 南珀斯</div>
+        <div class="day-sub">05:30 早起出發！鵜鶘 + Nature's Window + Skywalk + 沿海懸崖 + 尖峰石陣日落</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🦢 鵜鶘餵食</span>
+          <span class="tag tag-activity">🪨 峽谷</span>
+          <span class="tag tag-hotel">🏠 南珀斯住</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">05:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#E8622A"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">傑拉爾頓出發（退房10:00前，行李放車）</div>
+            <div class="tl-detail">車程約1小時45分至 Kalbarri 鎮</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">07:15</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">抵達 Kalbarri 鎮 — Pelican Cafe 早餐</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=Pelican%20Cafe%20Kalbarri" target="_blank" style="color:inherit;text-decoration:underline dotted;">Pelican Cafe</a> 07:00開門，面 Murchison River 河景，早餐配鵜鶘景色超棒！</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">08:45</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🦢 <a href="https://www.google.com/maps/search/?api=1&query=Kalbarri%20Pelican%20Feeding" target="_blank" style="color:inherit;text-decoration:underline dotted;">Kalbarri 鵜鶘餵食</a></div>
+            <div class="tl-detail">Grey St 河畔，每天 08:45，約30分鐘，免費（樂捐）<br>1975年開始的傳統，志工解說 + 可親手餵魚！</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">09:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">開車進 Kalbarri 國家公園（30分鐘）</div>
+            <div class="tl-detail">入園費 AUD $17/車，建議提前線上購票</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">10:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🪨 <a href="https://www.google.com/maps/search/?api=1&query=Nature%27s%20Window%20Kalbarri" target="_blank" style="color:inherit;text-decoration:underline dotted;">Nature's Window</a></div>
+            <div class="tl-detail">停車場步行約20分鐘即到，石拱框住峽谷構圖，西澳最iconic的地標照片！</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">11:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Kalbarri%20Skywalk" target="_blank" style="color:inherit;text-decoration:underline dotted;">Kalbarri Skywalk</a></div>
+            <div class="tl-detail">兩個懸空平台高懸 Murchison 峽谷100公尺上方，幾乎360度俯瞰，含在入園費內！<br>Skywalk Cafe 可補充咖啡和點心</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">12:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">出發沿海岸線南返（免費景點沿途停）</div>
+            <div class="tl-detail"></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">12:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🌊 <a href="https://www.google.com/maps/search/?api=1&query=Island%20Rock%20Natural%20Bridge%20Kalbarri" target="_blank" style="color:inherit;text-decoration:underline dotted;">Island Rock & Natural Bridge</a></div>
+            <div class="tl-detail">風浪侵蝕形成的奇岩，短步道即可，免費</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">13:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🌊 <a href="https://www.google.com/maps/search/?api=1&query=Mushroom%20Rock%20Rainbow%20Valley%20Kalbarri" target="_blank" style="color:inherit;text-decoration:underline dotted;">Mushroom Rock & Rainbow Valley</a></div>
+            <div class="tl-detail">鮮紅岩石地質景觀，3km 環形步道，免費</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">14:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Kalbarri 鎮午餐，繼續南返</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=Gorges%20Cafe%20Kalbarri" target="_blank" style="color:inherit;text-decoration:underline dotted;">Gorges Cafe</a> 或鎮上隨意</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">17:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🌅 <a href="https://www.google.com/maps/search/?api=1&query=The%20Pinnacles%20Desert%20Cervantes" target="_blank" style="color:inherit;text-decoration:underline dotted;">尖峰石陣日落</a></div>
+            <div class="tl-detail">石陣24小時開放！日落光線打在石柱上最震撼，人少又美<br>入園費 AUD $17/車（建議提前線上購票）</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">18:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">繼續南返南珀斯</div>
+            <div class="tl-detail">約1.5小時車程</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">20:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🏠 抵達南珀斯 Airbnb 入住</div>
+            <div class="tl-detail">房東 Rami｜Sandalwood, 1 Weston Ave, South Perth｜住2晚</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-tip">
+          <div class="info-box-title">💰 小提醒集合</div>
+          <ul>
+            <li>鵜鶘餵食是<strong>樂捐制</strong>，準備 gold coin（$1-2 硬幣）</li>
+            <li>離開 Kalbarri 前<strong>加滿油</strong>，南返路上加油站少</li>
+            <li>尖峰石陣日落後天黑很快，手機手電筒開著走回車上</li>
+            <li>Nature's Window 是 Murchison River 4億年侵蝕的傑作</li>
+          </ul>
+        </div>
+        <div class="info-box info-warn">
+          <div class="info-box-title">⚠️ 今天很長但很充實！</div>
+          05:30出發，全天行程豐富。體力分配要注意，Skywalk 後記得補充水分和食物再繼續。
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">💡 Skywalk 小驚喜</div>
+          Kalbarri Skywalk 已含在國家公園入園費內，不需額外付費！而且 Skywalk 本身24小時開放，日出日落都很美。
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🦜 Rainbow Jungle 鸚鵡中心（可加碼）</div>
+          <strong><a href="https://www.google.com/maps/search/?api=1&query=Rainbow%20Jungle%20Kalbarri" target="_blank" style="color:inherit;">Rainbow Jungle</a></strong> — 澳洲最大鸚鵡自由飛行鳥舍，全球最大紫冠吸蜜鸚鵡群 + 黑鳳頭鸚鵡近距離接觸！<br>就在鎮上（14 Bridgeman Rd），鵜鶘餵食後順路，AUD $16/人，約40分鐘<br>⚠️ 曾因氣旋受損，<strong>去前務必電話確認：(08) 9937 1248</strong>
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">🌅 尖峰石陣日落攝影小技巧</div>
+          日落前30分鐘抵達最佳，光線斜射石柱陰影最立體。日落後別急著走，藍調時刻（Blue Hour）配石陣剪影超好拍，天黑後還能看星空！
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/12 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#EBE6F7;color:#4A2E8C;">
+        <span class="day-num-date">12</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/12（一）抱無尾熊 + Busselton Jetty → Elizabeth Quay 晚餐</div>
+        <div class="day-sub">南珀斯出發南下</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🐨 抱無尾熊</span>
+          <span class="tag tag-hotel">🏠 南珀斯住</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">08:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">從南珀斯出發南下</div>
+            <div class="tl-detail">往 Byford 方向</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">10:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🐨 <a href="https://www.google.com/maps/search/?api=1&query=Cohunu%20Koala%20Park%20Byford" target="_blank" style="color:inherit;text-decoration:underline dotted;">Cohunu Koala Park — 抱無尾熊！</a></div>
+            <div class="tl-detail">Lot 103 Nettleton Rd, Byford WA｜開放 10:00-16:00<br>入場 AUD $15 + 抱無尾熊 AUD $30（含照片）<br>⚠️ 建議提前電話預約：(08) 9526 2966</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">11:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">南下往 Busselton（約1.5小時）</div>
+            <div class="tl-detail">10月賞鯨季！沿途朝海面留意南露脊鯨</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">13:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Busselton 碼頭午餐</div>
+            <div class="tl-detail">碼頭旁多間餐廳，邊吃邊看海</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">14:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🚂 <a href="https://www.google.com/maps/search/?api=1&query=Busselton%20Jetty" target="_blank" style="color:inherit;text-decoration:underline dotted;">Busselton Jetty 小火車 + 水下觀測站</a></div>
+            <div class="tl-detail">AUD $38/人｜全程約1小時45分｜務必提前訂票！<br>busseltonjetty.com.au — 南半球最長木棧橋</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">16:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">返回南珀斯（約2.5小時）</div>
+            <div class="tl-detail"></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">18:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🌃 <a href="https://www.google.com/maps/search/?api=1&query=Elizabeth%20Quay%20Perth" target="_blank" style="color:inherit;text-decoration:underline dotted;">Elizabeth Quay 晚餐 + 夜景</a></div>
+            <div class="tl-detail">南珀斯到 Elizabeth Quay 只要10-15分鐘，夜晚燈光倒映水面超美！</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🏛️ Busselton Jetty 小知識</div>
+          1865年啟用，全長 <strong>1,841公尺</strong>，南半球最長木造棧橋！當年是木材出口港，如今是西澳地標。🅿️ foreshore 付費停車場，早到好停。抱無尾熊場次通常固定時段，出發前電話確認當天時間。
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">💡 今天很輕鬆！</div>
+          拿掉 Lake Cave 後這天沒有時間壓力，可以在 Busselton 悠閒吃飯、散步，晚上 Elizabeth Quay 夜景完美收尾。
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🍽️ Busselton 午餐推薦</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=The%20Goose%20Busselton" target="_blank" style="color:inherit;">The Goose</a></strong> — 碼頭旁最佳海景餐廳，早午餐到晚餐都棒</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Shelter%20Brewing%20Co%20Busselton" target="_blank" style="color:inherit;">Shelter Brewing Co</a></strong> — 海邊精釀啤酒廠，披薩好吃氣氛讚</li>
+          </ul>
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🐋 10月賞鯨提醒</div>
+          Busselton 海域10月是南露脊鯨和座頭鯨遷徙季！在碼頭上、用餐時隨時朝海面看，免費賞鯨機會很高。小火車上也留意海面！
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🍽️ Elizabeth Quay 晚餐推薦</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Wildflower%20Restaurant%20Perth" target="_blank" style="color:inherit;">Wildflower Restaurant</a></strong> — 頂樓景觀餐廳，西澳在地食材</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=The%20Reveley%20Perth" target="_blank" style="color:inherit;">The Reveley</a></strong> — 碼頭邊，輕鬆氣氛</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Southshore%20Seafood%20Grill%20Perth" target="_blank" style="color:inherit;">Southshore Seafood</a></strong> — 海鮮首選</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/13 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#E8F3FB;color:#0C447C;">
+        <span class="day-num-date">13</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/13（二）珀斯機場還車 → 飛墨爾本</div>
+        <div class="day-sub">QF764 澳洲航空｜10:40起飛</div>
+        <div class="day-tags">
+          <span class="tag tag-car">🚗 還車</span>
+          <span class="tag tag-flight">✈️ 飛墨爾本</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">08:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">南珀斯 Airbnb 退房</div>
+            <div class="tl-detail">Sandalwood, 1 Weston Ave, South Perth</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">08:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#E8622A"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🚗 還車：珀斯機場</div>
+            <div class="tl-detail">T1/T2 & T3/T4 Terminal Buildings, Perth Airport</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">09:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">辦理登機、安檢，輕鬆候機</div>
+            <div class="tl-detail">機場有餐廳可吃早餐</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">10:40</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">✈️ QF764 珀斯（PER）起飛 → 墨爾本</div>
+            <div class="tl-detail">澳洲航空｜3位旅客｜飛行約3.5小時</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">17:10</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">抵達墨爾本（MEL）🎉</div>
+            <div class="tl-detail">⚠️ 時差注意：西澳 UTC+8，維州夏令時 UTC+11，抵達後手錶調快3小時！<br>🚌 機場到市區：SkyBus AUD $24/人（達 Southern Cross），3人搭 Uber 約 $55-70 更划算<br>💳 順路買 Myki 卡（7-Eleven / 車站有售），10/21 搭火車、電車用<br>🏠 入住 Airbnb（Sammi）｜West Side Place, 648 Lonsdale St</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-warn">
+          <div class="info-box-title">⛽ 還車前加滿油！</div>
+          機場附近有 BP / Ampol 加油站，還車前加滿，否則租車公司補油費是市價2-3倍。QF764 是國內線，Qantas 國內線在 T4 航廈。
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">💡 記得取消原訂單</div>
+          原本 Trip.com 的費里曼特取車訂單（10/10取車）需要取消，改成機場取車版本。確認取消費用！
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end perth -->
+
+<!-- ===================== MELBOURNE ===================== -->
+<div id="mel" class="trip-section">
+  <div class="section-hero section-hero-mel">
+    <div class="section-hero-inner">
+      <div class="section-hero-eyebrow">Victoria, Australia</div>
+      <div class="section-hero-title">墨爾本</div>
+      <div class="section-hero-dates">10月13日（二）— 10月24日（六）｜11晚</div>
+    </div>
+    <div class="section-hero-icon">☕</div>
+  </div>
+
+  <!-- Day 10/14 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#D6EDDE;color:#1B5E35;">
+        <span class="day-num-date">14</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/14（三）墨爾本市區探索</div>
+        <div class="day-sub">CBD / Southbank｜Airbnb Sammi（648 Lonsdale St）</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🏙️ 市區</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">早上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🏛️ 拱廊巡禮 — <a href="https://www.google.com/maps/search/?api=1&query=Block%20Arcade%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Block Arcade</a> + <a href="https://www.google.com/maps/search/?api=1&query=Royal%20Arcade%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Royal Arcade</a></div>
+            <div class="tl-detail">1892年維多利亞式拱廊，Hopetoun Tea Rooms 夢幻蛋糕櫥窗必看<br>接著 <a href="https://www.google.com/maps/search/?api=1&query=State%20Library%20Victoria" target="_blank" style="color:inherit;text-decoration:underline dotted;">State Library</a> 圓頂閱覽室（免費，超好拍！）</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">下午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Federation Square + Laneways 巷弄塗鴉</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=Hosier%20Lane%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Hosier Lane</a>、<a href="https://www.google.com/maps/search/?api=1&query=ACDC%20Lane%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">ACDC Lane</a> — 墨爾本最有個性的角落</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">傍晚</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Eureka%20Skydeck%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Eureka Skydeck 俯瞰墨爾本</a></div>
+            <div class="tl-detail">AUD $26/人，黃昏時分最美，透明玻璃懸空體驗</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-tip">
+          <div class="info-box-title">🚋 Free Tram Zone 免費電車！</div>
+          墨爾本 CBD 核心區搭電車<strong>完全免費</strong>（不用刷卡）！範圍：Queen Victoria Market 到 Flinders St、Spring St 到 Docklands。看到車站標示「Free Tram Zone」就是。省下不少交通費！
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">☕ 墨爾本咖啡文化小史</div>
+          二戰後義大利移民帶來 espresso 機，造就今日咖啡之都。Flat White 發源地之爭（墨爾本 vs 雪梨 vs 紐西蘭）至今未解。點咖啡試試「Magic」— 墨爾本限定隱藏款（double ristretto + 3/4 牛奶）！
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🍽️ 墨爾本 CBD 必吃</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Chin%20Chin%20Melbourne" target="_blank" style="color:inherit;">Chin Chin</a></strong> — 泰國菜排隊名店，氣氛超好</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Pellegrini%27s%20Espresso%20Bar%20Melbourne" target="_blank" style="color:inherit;">Pellegrini's Espresso Bar</a></strong> — 1954年開業，墨爾本最老義式咖啡廳</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Flower%20Drum%20Melbourne" target="_blank" style="color:inherit;">Flower Drum</a></strong> — 頂級廣東料理，墨爾本最佳中餐</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Supernormal%20Melbourne" target="_blank" style="color:inherit;">Supernormal Melbourne</a></strong> — 亞洲融合料理，網紅必打卡</li>
+          </ul>
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">🛍️ QVM 必買必吃（⚠️ 週三公休，留到10/22四再逛）</div>
+          <ul>
+            <li><strong>美食區</strong> — 波蘭甜甜圈車（Hot Jam Donuts）是傳奇，必吃！</li>
+            <li><strong>Deli Hall</strong> — 起司、火腿、橄欖，歐洲風味天堂</li>
+            <li><strong>紀念品</strong> — 袋鼠/無尾熊玩偶、羊毛製品比市區便宜</li>
+          </ul>
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">📍 CBD 周邊景點</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=NGV%20National%20Gallery%20of%20Victoria%20Melbourne" target="_blank" style="color:inherit;">NGV 維多利亞國立美術館</a></strong> — 南半球最大美術館，免費入場</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Royal%20Botanic%20Gardens%20Melbourne" target="_blank" style="color:inherit;">Royal Botanic Gardens</a></strong> — 免費，離 CBD 步行15分</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Carlton%20Gardens%20Melbourne" target="_blank" style="color:inherit;">Carlton Gardens + 博物館</a></strong> — 世界遺產建築群</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/15 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#FCE8D5;color:#7A3810;">
+        <span class="day-num-date">15</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/15（四）取車 → 菲利普島企鵝遊行</div>
+        <div class="day-sub">Shop 3/8 Franklin St, Melbourne｜TWD 14,340（至10/21）</div>
+        <div class="day-tags">
+          <span class="tag tag-car">🚗 取車</span>
+          <span class="tag tag-activity">🐧 企鵝</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">早上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#E8622A"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">取車：墨爾本市區</div>
+            <div class="tl-detail">Shop 3/8 Franklin St, Melbourne｜Trip.com 訂單｜TWD 14,340</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">下午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">前往菲利普島</div>
+            <div class="tl-detail">車程約1.5小時，可沿途停 Mornington Peninsula 看海</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">日落後</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🐧 <a href="https://www.google.com/maps/search/?api=1&query=Penguin%20Parade%20Phillip%20Island" target="_blank" style="color:inherit;text-decoration:underline dotted;">菲利普島小藍企鵝上岸！</a></div>
+            <div class="tl-detail">Summerland Beach — 每天日落後成群企鵝從海中上岸<br>務必提前訂票：penguins.org.au</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">晚上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">開車返回墨爾本 CBD</div>
+            <div class="tl-detail">住 648 Lonsdale St（Airbnb Sammi）<br>🅿️ <strong>今晚車停哪？</strong>先問房東 Sammi 大樓有無車位；沒有就查 Wilson / Secure Parking 夜間費率（CBD 過夜 $30-60），或 Parkhound App 租私人車位較省</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-warn">
+          <div class="info-box-title">🛣️ 墨爾本過路費注意！</div>
+          CBD 往菲利普島：走 <strong>Kings Way 接 M1 Monash Fwy 全程免費</strong>。若導航帶你走 CityLink（Burnley Tunnel）是<strong>電子收費路段</strong>（無現金亭）！Google Maps 記得設定「避開收費路段」，或事先上 linkt.com.au 買短期 pass。租車公司代收會加高額手續費。
+        </div>
+        <div class="info-box info-warn">
+          <div class="info-box-title">🐧 企鵝遊行嚴禁拍照！</div>
+          全程<strong>禁止拍照攝影</strong>（不開閃光也不行），手機收起來用眼睛記住。夜晚海邊10月可能低於10°C，羽絨外套必帶！🅿️ 現場有大型免費停車場。建議訂 Penguins Plus 升級座位更近距離。
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🍫 菲利普島順路美食</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Phillip%20Island%20Chocolate%20Factory" target="_blank" style="color:inherit;">Phillip Island Chocolate Factory</a></strong> — 巧克力工廠，伴手禮好選擇</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=San%20Remo%20Fishermans%20Co-op" target="_blank" style="color:inherit;">San Remo Fisherman's Co-op</a></strong> — 過橋前的漁人碼頭炸魚薯條，中午12點有鵜鶘餵食秀（免費！）🦢</li>
+          </ul>
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">📍 菲利普島加碼</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Nobbies%20Centre%20Phillip%20Island" target="_blank" style="color:inherit;">Nobbies Centre</a></strong> — 可看到澳大利亞毛皮海豹，免費</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Churchill%20Island%20Heritage%20Farm%20Phillip%20Island" target="_blank" style="color:inherit;">Churchill Island</a></strong> — 歷史農場，可看到剪羊毛表演</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Cape%20Woolamai%20Phillip%20Island" target="_blank" style="color:inherit;">Cape Woolamai</a></strong> — 最高峰，健行俯瞰全島</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/16 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#EBE6F7;color:#4A2E8C;">
+        <span class="day-num-date">16</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/16（五）大洋路出發 → 阿波羅灣</div>
+        <div class="day-sub">海岸汽車旅館（Booking）｜171 Great Ocean Road, Apollo Bay</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🌊 大洋路</span>
+          <span class="tag tag-hotel">🏨 換住</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">11:00前</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">墨爾本 Airbnb 退房（Sammi）</div>
+            <div class="tl-detail">West Side Place, 648 Lonsdale St</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">早上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Torquay%20Victoria" target="_blank" style="color:inherit;text-decoration:underline dotted;">Torquay</a> + <a href="https://www.google.com/maps/search/?api=1&query=Bells%20Beach%20Torquay" target="_blank" style="color:inherit;text-decoration:underline dotted;">Bells Beach</a></div>
+            <div class="tl-detail">大洋路起點！Bells Beach 是世界著名衝浪點，冬天賽事在此舉辦</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">中午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Lorne%20Victoria" target="_blank" style="color:inherit;text-decoration:underline dotted;">Lorne</a> — 午餐 + 海灘散步</div>
+            <div class="tl-detail">大洋路最漂亮小鎮，咖啡廳和餐廳選擇多</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">下午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🐨🦜 <a href="https://www.google.com/maps/search/?api=1&query=Kennett%20River%20Koala%20Walk" target="_blank" style="color:inherit;text-decoration:underline dotted;">Kennett River 無尾熊步道 + 國王鸚鵡</a></div>
+            <div class="tl-detail">大洋路最強野生動物點！Grey River Rd 樹上找野生無尾熊（目擊率超高）<br>國王鸚鵡、鳳頭鸚鵡會直接飛到身上！Kafe Koala 旁最多<br>完全免費｜停留約40分鐘｜Lorne 到 Apollo Bay 途中順路</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">傍晚</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🏨 入住阿波羅灣</div>
+            <div class="tl-detail">海岸汽車旅館（Booking）｜171 Great Ocean Road, Apollo Bay｜入住 14:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-food">
+          <div class="info-box-title">🍽️ 阿波羅灣美食</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Chris%27s%20Beacon%20Point%20Restaurant%20Apollo%20Bay" target="_blank" style="color:inherit;">Chris's Beacon Point Restaurant</a></strong> — 山頂海景餐廳，龍蝦必點</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Apollo%20Bay%20Fishermen%27s%20Co-op" target="_blank" style="color:inherit;">Apollo Bay Fishermen's Co-op</a></strong> — 最新鮮的海鮮直售</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=La%20Bimba%20Apollo%20Bay" target="_blank" style="color:inherit;">La Bimba</a></strong> — 義大利料理，在地人最愛</li>
+          </ul>
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">📍 大洋路第一天必停點</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Memorial%20Arch%20Great%20Ocean%20Road" target="_blank" style="color:inherit;">Memorial Arch</a></strong> — 大洋路地標拱門，必拍紀念照！</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Teddy%27s%20Lookout%20Lorne" target="_blank" style="color:inherit;">Teddy's Lookout</a></strong> — Lorne 最美觀景台，俯瞰海岸公路蜿蜒</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Erskine%20Falls%20Lorne" target="_blank" style="color:inherit;">Erskine Falls</a></strong> — 30公尺瀑布，步道輕鬆，10分鐘車程</li>
+          </ul>
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🏛️ 大洋路 = 全球最大戰爭紀念碑</div>
+          1919-1932年由<strong>3000名一戰返鄉士兵</strong>以鋤頭鐵鍬徒手開鑿，紀念陣亡戰友。Memorial Arch 拱門就是這段歷史的見證——拍照時想想這條路的意義。🅿️ Bells Beach、Lorne 皆有免費停車場。⛽ Apollo Bay 是大洋路最後大鎮，晚上加滿油！
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">🦜 Kennett River 鸚鵡攻略</div>
+          國王鸚鵡（紅綠配色超美）常聚集在 Kafe Koala 周邊，鎮定站著牠們就會靠近。想看更自然的無尾熊，沿 Grey River Rd 往上走過前兩個彎道，人少樹上驚喜多。請勿餵食！
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/17 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#EBE6F7;color:#4A2E8C;">
+        <span class="day-num-date">17</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/17（六）十二門徒 + 坎貝爾港</div>
+        <div class="day-sub">斯里弗默別墅酒店（Booking）｜14 Lord St, Port Campbell</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🌊 大洋路精華</span>
+          <span class="tag tag-hotel">🏨 換住</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">10:00前</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">阿波羅灣退房</div>
+            <div class="tl-detail">171 Great Ocean Road, Apollo Bay</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">早上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Otway 國家公園 — 雨林步道</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=Maits%20Rest%20Rainforest%20Walk%20Otway" target="_blank" style="color:inherit;text-decoration:underline dotted;">Maits Rest Rainforest Walk</a>（30分鐘，免費）— 高大樹蕨林，清涼有氣勢</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">中午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Gibson%20Steps%20Great%20Ocean%20Road" target="_blank" style="color:inherit;text-decoration:underline dotted;">Gibson Steps</a> — 下到海灘</div>
+            <div class="tl-detail">走下186個台階到達石柱海灘，仰望石柱更震撼</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">中午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🪨 <a href="https://www.google.com/maps/search/?api=1&query=Twelve%20Apostles%20Great%20Ocean%20Road" target="_blank" style="color:inherit;text-decoration:underline dotted;">十二門徒岩（The Twelve Apostles）</a></div>
+            <div class="tl-detail">大洋路最著名景點！目前剩8根，日出日落最美。走 Discovery Walk 可更多角度觀賞。</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">下午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Loch%20Ard%20Gorge%20Port%20Campbell" target="_blank" style="color:inherit;text-decoration:underline dotted;">Loch Ard Gorge</a></div>
+            <div class="tl-detail">1878年船難故事發生地，峽谷地形壯觀，距十二門徒幾分鐘車程</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">14:00後</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🏨 入住坎貝爾港</div>
+            <div class="tl-detail">斯里弗默別墅酒店（Booking）｜14 Lord St, Port Campbell｜入住 14:00</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-tip">
+          <div class="info-box-title">💡 十二門徒最佳拍攝時間</div>
+          建議日出或日落前後各1小時，光線最戲劇化。觀景台很大，人多時往兩端走可以有更好位置。🅿️ 遊客中心<strong>免費停車</strong>，走地下道到觀景台。Gibson Steps 停車場很小，滿了就停十二門徒停車場走過去（15分鐘）。
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🏛️ 十二門徒的秘密</div>
+          其實<strong>從來沒有12根</strong>！原名「母豬與小豬」（Sow and Piglets），1920年代為觀光改名。最多曾有9根，2005年一根轟然倒塌後剩8根——海浪每年侵蝕2cm，趁還在快看。Loch Ard Gorge 則是1878年船難地：52人中僅兩位19歲青年 Tom 與 Eva 生還漂至此灣，故事淒美。
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">📍 十二門徒周邊必去（都免費）</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=The%20Razorback%20Great%20Ocean%20Road" target="_blank" style="color:inherit;">The Razorback</a></strong> — Loch Ard Gorge 旁的鋸齒岩，人少景美</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=The%20Grotto%20Great%20Ocean%20Road" target="_blank" style="color:inherit;">The Grotto</a></strong> — 天然岩洞窗框海景，退潮時最美</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=London%20Bridge%20Great%20Ocean%20Road%20Victoria" target="_blank" style="color:inherit;">London Bridge</a></strong> — 斷橋奇岩，1990年斷裂的傳奇景點</li>
+          </ul>
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🍽️ 坎貝爾港美食</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Waves%20Cafe%20Port%20Campbell" target="_blank" style="color:inherit;">Waves Cafe Port Campbell</a></strong> — 早餐和早午餐，在地評價高</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Port%20Campbell%20Hotel" target="_blank" style="color:inherit;">Port Campbell Hotel</a></strong> — 百年老酒吧，炸魚薯條超好吃</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/18 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#D6EDDE;color:#1B5E35;">
+        <span class="day-num-date">18</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/18（日）坎貝爾港 → 格蘭屏（Halls Gap）</div>
+        <div class="day-sub">霍爾斯加普湖濱假日公園（Booking）｜Halls Gap｜住2晚</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🏔️ 格蘭屏</span>
+          <span class="tag tag-hotel">🏨 換住</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">10:00前</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">坎貝爾港退房</div>
+            <div class="tl-detail">14 Lord St, Port Campbell</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">早上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Logan%27s%20Beach%20Whale%20Watching%20Platform%20Warrnambool" target="_blank" style="color:inherit;text-decoration:underline dotted;">Warrnambool — Logan's Beach 賞鯨台</a></div>
+            <div class="tl-detail">10月是南露脊鯨賞鯨季！從岸邊直接看，完全免費</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">下午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🏔️ 抵達格蘭屏 Halls Gap 入住</div>
+            <div class="tl-detail">霍爾斯加普湖濱假日公園（Booking）｜23-27 Tymna Drive, Halls Gap｜入住 14:00｜住2晚</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">傍晚</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Halls Gap 小鎮散步 + 看袋鼠</div>
+            <div class="tl-detail">傍晚袋鼠會自己走進鎮上草坪，完全免費野生奇景</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🏛️ Gariwerd — 22,000年的土地</div>
+          Grampians 原住民名為 <strong>Gariwerd</strong>，Jardwadjali 與 Djab Wurrung 族在此生活超過22,000年，擁有維州90%的原住民岩畫。🐋 Logan's Beach 是南露脊鯨「育嬰房」，母鯨帶幼鯨在近岸活動，10月是季末仍值得一看。⛽ 抵達 Halls Gap 順便加油。
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🦜🦘 Halls Gap 傍晚野生動物秀（免費）</div>
+          你住的 Lakeside Tourist Park 本身就是目擊點！傍晚袋鼠群直接走進露營區草坪，<strong>硫磺鳳頭鸚鵡</strong>和<strong>深紅玫瑰鸚鵡</strong>（Crimson Rosella）也會現身。日落前1小時在草坪邊坐著等就好。
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🍽️ Halls Gap 美食</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Halls%20Gap%20Hotel" target="_blank" style="color:inherit;">Halls Gap Hotel</a></strong> — 鎮上最大餐廳，澳洲料理</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Balconies%20Cafe%20Halls%20Gap" target="_blank" style="color:inherit;">Balconies Cafe Halls Gap</a></strong> — 早餐首選，面山景</li>
+            <li><strong>建議超市採買</strong> — 住宿有廚房，可自炊省錢</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/19 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#D6EDDE;color:#1B5E35;">
+        <span class="day-num-date">19</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/19（一）格蘭屏國家公園全天</div>
+        <div class="day-sub">繼續住 Halls Gap，不用換宿</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🏔️ 格蘭屏</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">早上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=The%20Pinnacle%20Grampians" target="_blank" style="color:inherit;text-decoration:underline dotted;">The Pinnacle 健行 — 格蘭屏最佳觀景台</a></div>
+            <div class="tl-detail">來回約2-3小時，爬到頂端可360度俯瞰整個 Grampians</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">中午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Mackenzie%20Falls%20Grampians" target="_blank" style="color:inherit;text-decoration:underline dotted;">Mackenzie Falls — 格蘭屏最大瀑布</a></div>
+            <div class="tl-detail">下山步道約30分鐘，可在瀑布腳游泳！水很冰但超爽</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">下午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Reed%20Lookout%20Grampians" target="_blank" style="color:inherit;text-decoration:underline dotted;">Reed Lookout</a> + <a href="https://www.google.com/maps/search/?api=1&query=Boroka%20Lookout%20Grampians" target="_blank" style="color:inherit;text-decoration:underline dotted;">Boroka Lookout</a></div>
+            <div class="tl-detail">開車就能到的觀景台，壯麗山景，拍照天堂</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">傍晚</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">返回 Halls Gap，晚餐休息</div>
+            <div class="tl-detail">明天長途返墨爾本</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-tip">
+          <div class="info-box-title">🅿️ 步道難度提醒</div>
+          MacKenzie Falls 停車免費，但走到瀑布底要下 <strong>260 階</strong>，回程爬升較累，量力而為（也有輪椅可達的上方觀景台 Bluff Lookout）。清晨傍晚山區開車注意袋鼠！
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">💡 原住民岩畫</div>
+          Bunjil's Shelter — 格蘭屏區域有超過4,000年歷史的原住民岩畫，距鎮上30分鐘車程，免費，是澳洲原住民文化的重要遺址。
+        </div>
+        <div class="info-box info-nearby">
+          <div class="info-box-title">🦘 野生動物</div>
+          格蘭屏是全澳洲袋鼠密度最高的地方之一。清晨和傍晚在 Zumstein 野餐區，袋鼠會直接從你手裡吃東西！
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/20 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#EBE6F7;color:#4A2E8C;">
+        <span class="day-num-date">20</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/20（二）格蘭屏 → 返回墨爾本</div>
+        <div class="day-sub">Airbnb（房東 Joshua）｜442 Elizabeth St, Melbourne｜住3晚</div>
+        <div class="day-tags">
+          <span class="tag tag-hotel">🏠 換住</span>
+          <span class="tag tag-activity">🏙️ 返墨</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">10:00前</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Halls Gap 退房</div>
+            <div class="tl-detail">23-27 Tymna Drive, Halls Gap</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">車程</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">返回墨爾本</div>
+            <div class="tl-detail">約2.5-3小時，走 Western Hwy (M8) <strong>全程免費</strong>無過路費<br>🏛️ 順路加碼：<a href="https://www.google.com/maps/search/?api=1&query=Sovereign%20Hill%20Ballarat" target="_blank" style="color:inherit;text-decoration:underline dotted;">Ballarat 疏芬山（Sovereign Hill）</a>就在回程路上——1850年代淘金熱小鎮實景重現，可淘真金！有興趣可停2-3小時（門票約 AUD $49）</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">15:00後</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🏠 入住墨爾本新 Airbnb（Joshua）</div>
+            <div class="tl-detail">442 Elizabeth St, Melbourne｜住至 10/23（11:00退房）<br>🅿️ <strong>今晚車停哪？</strong>先問房東 Joshua 有無車位！CBD 過夜停車 $30-60，QVM 附近停車場或 Parkhound App 租私人車位較省。明早還車就解脫了</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">傍晚</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Fitzroy / Collingwood 探索</div>
+            <div class="tl-detail">墨爾本最有個性的街區，獨立書店、咖啡廳、塗鴉牆，適合晚上閒逛</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/21 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#FCE8D5;color:#7A3810;">
+        <span class="day-num-date">21</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/21（三）還車 → Puffing Billy 蒸汽火車（大眾運輸日）</div>
+        <div class="day-sub">早上還車後搭 Metro Belgrave Line 前往</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🚂 Puffing Billy</span>
+          <span class="tag tag-car">🚗 還車</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">08:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#E8622A"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🚗 還車</div>
+            <div class="tl-detail"><a href="https://www.google.com/maps/search/?api=1&query=Franklin%20Street%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Shop 3/8 Franklin St, Melbourne</a>（早上還車）</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">08:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🚆 Flinders Street 搭 Belgrave Line</div>
+            <div class="tl-detail">Metro 直達 Belgrave 站，約75分鐘，票價約 $4（用 Myki 卡）<br>下車跟著月台藍色標線走2分鐘就到 Puffing Billy</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">10:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🚂 <a href="https://www.google.com/maps/search/?api=1&query=Puffing%20Billy%20Railway%20Belgrave" target="_blank" style="color:inherit;text-decoration:underline dotted;">Puffing Billy 蒸汽火車</a> → Lakeside</div>
+            <div class="tl-detail">⚠️ 發車前60分鐘要到報到處 check-in！<br>puffingbilly.com.au — 提前訂票<br>搭到 Lakeside 站（Emerald Lake Park），傳統上腳可懸掛窗外！</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">12:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🌳 <a href="https://www.google.com/maps/search/?api=1&query=Emerald%20Lake%20Park%20Victoria" target="_blank" style="color:inherit;text-decoration:underline dotted;">Emerald Lake Park 野餐散步</a></div>
+            <div class="tl-detail">湖畔森林公園，環湖步道輕鬆好走，有咖啡廳。留意樹上的鳳頭鸚鵡和玫瑰鸚鵡！🦜</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">14:30</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🚂 蒸汽火車返回 Belgrave</div>
+            <div class="tl-detail">回程再享受一次森林蒸汽火車</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">16:00</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🚆 Metro 回墨爾本市區</div>
+            <div class="tl-detail">約75分鐘回到 Flinders Street</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">傍晚</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🌆 <a href="https://www.google.com/maps/search/?api=1&query=St%20Kilda%20Beach%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">St Kilda 海灘黃昏</a>（自由選擇）</div>
+            <div class="tl-detail">搭 Tram 96 前往，<a href="https://www.google.com/maps/search/?api=1&query=Acland%20Street%20St%20Kilda" target="_blank" style="color:inherit;text-decoration:underline dotted;">Acland Street 甜點街</a> + St Kilda Pier 免費看小企鵝回巢！🐧</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-warn">
+          <div class="info-box-title">⚠️ Puffing Billy 大眾運輸重點</div>
+          需要 Myki 卡搭 Metro（機場或便利商店可買）。Puffing Billy 要求發車前60分鐘報到，30分鐘前截止，火車不等人！搭 09:30 班次建議 08:00 前從市區出發。
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">🦜 為什麼 Emerald Lake Park 取代丹德農山區</div>
+          沒車後 Grants Picnic Ground 和 SkyHigh 很難到達（公車班次極少）。Emerald Lake Park 是 Puffing Billy 的經典終點站玩法，同樣有鸚鵡出沒，而且蒸汽火車來回體驗最完整！
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">🐧 St Kilda 小彩蛋</div>
+          St Kilda Pier 防波堤末端有一個小企鵝棲息地，每天傍晚日落後可免費觀賞企鵝回巢，是菲利普島的免費迷你版！
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🍽️ St Kilda 美食</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Monarch%20Cake%20Shop%20St%20Kilda" target="_blank" style="color:inherit;">Monarch Cake Shop</a></strong> — 1934年老店，猶太風格糕點</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Pontoon%20Beach%20Bar%20St%20Kilda" target="_blank" style="color:inherit;">Pontoon Beach Bar</a></strong> — 海景下午茶或晚餐</li>
+            <li><strong>Acland Street</strong> — 各式甜點麵包店集中地</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/22 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#D6EDDE;color:#1B5E35;">
+        <span class="day-num-date">22</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/22（四）墨爾本最後完整一天</div>
+        <div class="day-sub">自由行程，放鬆探索</div>
+        <div class="day-tags">
+          <span class="tag tag-activity">🏙️ 自由活動</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">早上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Queen%20Victoria%20Market%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Queen Victoria Market 晨市</a></div>
+            <div class="tl-detail">週四開放，買伴手禮、Ugg boots、澳洲保養品、麥蘆卡蜂蜜</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">中午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Degraves%20Street%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Degraves Street 拱廊咖啡文化</a></div>
+            <div class="tl-detail">墨爾本最有名的咖啡巷弄，體驗正宗澳式 Flat White</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">下午</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title"><a href="https://www.google.com/maps/search/?api=1&query=Royal%20Botanic%20Gardens%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Royal Botanic Gardens</a></div>
+            <div class="tl-detail">免費入場，漫步湖邊，下午茶首選</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">晚上</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#4A7C59"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">最後一頓好好的晚餐</div>
+            <div class="tl-detail">Southbank 餐廳區或 Fitzroy 特色餐廳</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-food">
+          <div class="info-box-title">☕ 墨爾本咖啡文化必體驗</div>
+          <ul>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Patricia%20Coffee%20Brewers%20Melbourne" target="_blank" style="color:inherit;">Patricia Coffee Brewers</a></strong> — 站著喝的傳奇咖啡，墨爾本No.1</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Hardware%20Societe%20Melbourne" target="_blank" style="color:inherit;">Hardware Société</a></strong> — 早午餐名店，法式澳風</li>
+            <li><strong><a href="https://www.google.com/maps/search/?api=1&query=Hopetoun%20Tea%20Rooms%20Melbourne" target="_blank" style="color:inherit;">Hopetoun Tea Rooms</a></strong> — 1892年老茶室，蛋糕櫥窗超夢幻（在 Block Arcade）</li>
+          </ul>
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">🧾 購物退稅提醒</div>
+          今天大採購記得：<strong>同一商店滿 AUD $300 保留 tax invoice</strong>，明天機場退10%！QVM 大部分攤位是小店湊不到，但藥妝店（Chemist Warehouse）、UGG 專賣店很容易達標。
+        </div>
+        <div class="info-box info-food">
+          <div class="info-box-title">🛍️ 行前必買伴手禮</div>
+          <ul>
+            <li>麥蘆卡蜂蜜（Manuka Honey）— 在超市買最划算</li>
+            <li>Billy Tea、Milo、Tim Tam 餅乾 — 超市必掃</li>
+            <li>Ugg Boots — QVM 附近有折扣店</li>
+            <li>澳洲紅酒 — 機場免稅店可帶2瓶</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/23 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#FCE8D5;color:#7A3810;">
+        <span class="day-num-date">23</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/23（五）退房 → 自由時間 → 深夜搭機</div>
+        <div class="day-sub">⚠️ 退房至搭機約14小時空檔</div>
+        <div class="day-tags">
+          <span class="tag tag-hotel">🏠 退房</span>
+          <span class="tag tag-flight">✈️ 深夜出發</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">11:00前</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#7B5EA7"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">Airbnb 退房（Joshua）</div>
+            <div class="tl-detail">442 Elizabeth St, Melbourne — 行李可寄放或前往機場</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">11:00-</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#888"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">自由時間（約14小時）</div>
+            <div class="tl-detail">行李可在市區 Bounce 或 Stasher 行李寄存服務寄放</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">22:00前</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">前往墨爾本機場（MEL）</div>
+            <div class="tl-detail">機場巴士 <a href="https://www.google.com/maps/search/?api=1&query=SkyBus%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">SkyBus</a> 從 <a href="https://www.google.com/maps/search/?api=1&query=Southern%20Cross%20Station%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Southern Cross Station</a> 出發，約30分鐘，AUD $20</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">00:45</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">✈️ CX178 墨爾本起飛</div>
+            <div class="tl-detail">國泰航空 → 香港</div>
+          </div>
+        </div>
+      </div>
+      <div class="info-section">
+        <div class="info-box info-tip">
+          <div class="info-box-title">🧾 TRS 退稅流程</div>
+          <ul>
+            <li>要托運的退稅品：先到<strong>安檢前</strong>的 TRS 辦公室驗貨蓋章</li>
+            <li>手提的退稅品：過安檢後到 TRS 櫃台辦理</li>
+            <li>需出示：商品 + tax invoice + 護照 + 登機證</li>
+            <li>深夜航班人少，但仍建議提早2.5-3小時到機場</li>
+          </ul>
+        </div>
+        <div class="info-box info-tip">
+          <div class="info-box-title">💡 最後一天建議規劃</div>
+          行李先存放 → 去 <a href="https://www.google.com/maps/search/?api=1&query=Melbourne%20Cricket%20Ground%20MCG" target="_blank" style="color:inherit;text-decoration:underline dotted;">MCG（墨爾本板球場）</a>外圍拍照 → <a href="https://www.google.com/maps/search/?api=1&query=Fitzroy%20Gardens%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Fitzroy Gardens 散步</a> → 下午在 <a href="https://www.google.com/maps/search/?api=1&query=Southgate%20Melbourne" target="_blank" style="color:inherit;text-decoration:underline dotted;">Southgate 河邊喝咖啡</a> → 晚上在機場用餐後登機。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 10/24 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-num" style="background:#E8F3FB;color:#0C447C;">
+        <span class="day-num-date">24</span>
+        <span class="day-num-mon">Oct</span>
+      </div>
+      <div class="day-meta">
+        <div class="day-title">10/24（六）返回台灣 🎉</div>
+        <div class="day-sub">墨爾本 → 香港 → 台北</div>
+        <div class="day-tags">
+          <span class="tag tag-flight">✈️ 回程</span>
+        </div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">00:45</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">CX178 墨爾本（MEL）起飛</div>
+            <div class="tl-detail">國泰航空｜3位旅客</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">06:55</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">抵達香港（HKG）轉機</div>
+            <div class="tl-detail">約1.5小時轉機時間</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">08:35</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#1B6CA8"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">CX530 香港起飛</div>
+            <div class="tl-detail">國泰航空 → 台北</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time">10:25</div>
+          <div class="tl-dot-wrap"><div class="tl-dot" style="background:#E8622A"></div></div>
+          <div class="tl-content">
+            <div class="tl-title">🏠 抵達台北（TPE）— 回家囉！</div>
+            <div class="tl-detail">18天 · 伯斯 + 墨爾本 · 難忘回憶收藏完畢 🦘☕</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- end mel -->
+
+<!-- ===================== SUMMARY ===================== -->
+<div id="summary" class="trip-section">
+
+  <div class="cost-section" style="margin-top:32px;">
+    <div class="cost-header">
+      <div class="cost-header-title">💰 已訂費用總覽</div>
+      <div class="cost-header-sub">以下為已確認訂單金額</div>
+    </div>
+
+    <!-- 總金額 -->
+    <div style="padding:20px 24px;background:#FDF8F2;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <div style="font-size:12px;color:var(--mid);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">已知總金額（TWD）</div>
+        <div style="font-size:11px;color:var(--mid);">不含活動費用 AUD $823.88</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--coral);">TWD 189,275</div>
+        <div style="font-size:11px;color:var(--mid);">+ AUD $823.88 活動費</div>
+      </div>
+    </div>
+
+    <!-- 交通 -->
+    <div style="padding:14px 24px 4px;background:var(--sand);">
+      <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--ocean);">✈️ 交通</div>
+    </div>
+    <div class="cost-table" style="padding-top:4px;">
+      <div class="cost-row">
+        <span class="cost-label">✈️ 台北→珀斯→墨爾本→台北（3人）</span>
+        <span class="cost-amount">TWD 77,256</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🚗 租車①：珀斯機場取還車（10/8-10/13）</span>
+        <span class="cost-amount">TWD 9,477</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🚗 租車②：墨爾本市區（10/15-10/21）</span>
+        <span class="cost-amount">TWD 14,340</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🚢 羅特尼斯島渡輪 來回 × 3人（已付）｜Ref: 2293091</span>
+        <span class="cost-amount">AUD $180</span>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:10px 24px;background:#EBF3FB;border-top:1px solid #C5DDF2;border-bottom:2px solid var(--border);">
+      <span style="font-size:12px;font-weight:600;color:var(--ocean);">交通小計</span>
+      <span style="font-size:14px;font-weight:700;color:var(--ocean);">TWD 101,073 + AUD $180</span>
+    </div>
+
+    <!-- 住宿 -->
+    <div style="padding:14px 24px 4px;background:var(--sand);">
+      <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--eucalyptus);">🏠 住宿</div>
+    </div>
+    <div class="cost-table" style="padding-top:4px;">
+      <div class="cost-row">
+        <span class="cost-label">🏠 費里曼特 Airbnb × 2晚（Michael）</span>
+        <span class="cost-amount">TWD 12,654</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🏨 傑拉爾頓 Booking × 1晚</span>
+        <span class="cost-amount">TWD 5,897</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🏠 南珀斯 Airbnb × 2晚（Rami）</span>
+        <span class="cost-amount">TWD 13,410</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🏠 墨爾本 Airbnb × 3晚（Sammi）</span>
+        <span class="cost-amount">TWD 16,768</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🏨 阿波羅灣 Booking × 1晚</span>
+        <span class="cost-amount">TWD 6,050</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🏨 坎貝爾港 Booking × 1晚</span>
+        <span class="cost-amount">TWD 6,690</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🏨 格蘭屏 Halls Gap Booking × 2晚</span>
+        <span class="cost-amount">TWD 7,772</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🏠 墨爾本 Airbnb × 3晚（Joshua）</span>
+        <span class="cost-amount">TWD 18,961</span>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:10px 24px;background:#EBF3EE;border-top:1px solid #B8DCC2;border-bottom:2px solid var(--border);">
+      <span style="font-size:12px;font-weight:600;color:var(--eucalyptus);">住宿小計</span>
+      <span style="font-size:14px;font-weight:700;color:var(--eucalyptus);">TWD 88,202</span>
+    </div>
+
+    <!-- 活動 -->
+    <div style="padding:14px 24px 4px;background:var(--sand);">
+      <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--dusk);">🎯 活動</div>
+    </div>
+    <div class="cost-table" style="padding-top:4px;">
+      <div class="cost-row">
+        <span class="cost-label">🚲 羅特尼斯島電動腳踏車 ×3（已付）｜Ref: 260319357</span>
+        <span class="cost-amount">AUD $255</span>
+      </div>
+      <div class="cost-row">
+        <span class="cost-label">🦭 Jurien Bay 海獅共游 × 3人（已付）｜Ref: R1PMFLA</span>
+        <span class="cost-amount">AUD $568.88</span>
+      </div>
+      <div class="cost-row" style="opacity:0.5;">
+        <span class="cost-label">🐨 Cohunu 無尾熊公園（待訂）</span>
+        <span class="cost-amount">AUD ~$135</span>
+      </div>
+      <div class="cost-row" style="opacity:0.5;">
+        <span class="cost-label">🚢 Busselton Jetty（待訂）</span>
+        <span class="cost-amount">AUD ~$114</span>
+      </div>
+      <div class="cost-row" style="opacity:0.5;">
+        <span class="cost-label">🐧 菲利普島企鵝遊行（待訂）</span>
+        <span class="cost-amount">AUD ~$</span>
+      </div>
+      <div class="cost-row" style="opacity:0.5;">
+        <span class="cost-label">🚂 Puffing Billy 蒸汽火車（待訂）</span>
+        <span class="cost-amount">AUD ~$201</span>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding:10px 24px;background:#EEF0FB;border-top:1px solid #C5C9F2;border-bottom:2px solid var(--border);">
+      <span style="font-size:12px;font-weight:600;color:var(--dusk);">活動小計（已付）</span>
+      <span style="font-size:14px;font-weight:700;color:var(--dusk);">AUD $823.88</span>
+    </div>
+
+    <div class="cost-note">※ 淡色項目為待訂預估金額，不計入總計｜國家公園入園費另計</div>
+  </div>
+
+  <!-- 待訂票券 -->
+  <div class="checklist-section">
+    <div class="checklist-header">
+      <div class="checklist-header-title">📋 行前待訂票券清單</div>
+    </div>
+    <div class="checklist-body">
+      <div class="check-item" style="background:#FEF0EB;">
+        <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+        <div class="check-label">
+          <strong>🪪 駕照英文證明 — 3人都要辦（IDP + NAATI 雙保險）</strong>
+          <span>① IDP：台灣監理站臨櫃辦，身分證＋駕照＋2吋照片＋NT$250，當場核發<br>② NAATI：線上翻譯社辦，AUD $30-50，數位 PDF 更快<br>兩者都要跟<strong>台灣駕照正本</strong>一起出示，缺正本兩者皆無效！</span>
+        </div>
+      </div>
+<div class="check-item">
+        <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+        <div class="check-label">
+          <strong>🪨 Kalbarri 國家公園入園費（10/11）</strong>
+          <span>exploreparks.dbca.wa.gov.au 線上預購 AUD $17/車（Skywalk 已含在入園費內！）</span>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+        <div class="check-label">
+          <strong>🐨 Cohunu 無尾熊公園預約（10/12）</strong>
+          <span>電話預約：(08) 9526 2966 — 抱無尾熊名額有限</span>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+        <div class="check-label">
+          <strong>🚢 Busselton Jetty 小火車 + 水下觀測站（10/12）</strong>
+          <span>busseltonjetty.com.au — AUD $38/人，旺季容易客滿</span>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+        <div class="check-label">
+          <strong>🐧 菲利普島企鵝遊行（10/15）</strong>
+          <span>penguins.org.au — 旺季10月容易售完，建議訂 Penguins Plus 升級座位</span>
+        </div>
+      </div>
+      <div class="check-item">
+        <div class="check-box" onclick="this.classList.toggle('checked')"></div>
+        <div class="check-label">
+          <strong>🚂 Puffing Billy 蒸汽火車（10/21）</strong>
+          <span>puffingbilly.com.au — AUD $67起/人，建議訂9:30或10:30班次</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 注意事項 -->
+  <div style="background:white;border-radius:16px;border:1px solid var(--border);margin-top:16px;overflow:hidden;">
+    <div style="background:linear-gradient(135deg,#4A7C59,#2D5A3D);padding:20px 24px;">
+      <div style="font-family:'Playfair Display',serif;font-size:20px;color:#fff;">🌿 行前重要提醒</div>
+    </div>
+    <div style="padding:16px 24px;display:flex;flex-direction:column;gap:10px;">
+      <div class="info-box info-warn">
+        <div class="info-box-title">⚠️ 澳洲入境規定</div>
+        嚴禁攜帶新鮮食物、肉類、植物入境！包含飛機上未吃完的食物。違規罰款高達 AUD $5,000。建議在機上就吃完所有食物。
+      </div>
+      <div class="info-box info-tip">
+        <div class="info-box-title">💰 澳洲不用給小費！</div>
+        餐廳、計程車、飯店都<strong>不需要小費</strong>，帳單金額就是總額。部分餐廳週末/假日會加收 10-15% surcharge（會標示在菜單上），這是正常的不是小費。
+      </div>
+      <div class="info-box info-warn">
+        <div class="info-box-title">🔌 插座跟台灣不一樣！</div>
+        澳洲是<strong>八字型 Type I 插座</strong>（三孔斜八字），電壓 230V。台灣的插頭插不進去，<strong>每人帶轉接頭</strong>！筆電手機充電器多支援 100-240V 不用變壓器。
+      </div>
+      <div class="info-box info-tip">
+        <div class="info-box-title">🧾 TRS 退稅（購物族必看）</div>
+        同一商店消費滿 <strong>AUD $300</strong>（60天內、可累計同店多筆），出境時可退 10% GST！保留 tax invoice，機場 TRS 櫃台辦理。UGG、保健品、精品都適用。
+      </div>
+      <div class="info-box info-warn">
+        <div class="info-box-title">🪪 駕照英文證明必辦（3人都要）— IDP + NAATI 雙保險</div>
+        澳洲法律規定非英文駕照要附英文翻譯，<strong>IDP 國際駕照和 NAATI 認證翻譯本擇一即可</strong>，兩者法律效力相同，全澳洲各州都承認。我們兩個都準備，保險更足：<br><br>
+        <strong>① IDP（台灣出發前辦）</strong> — 監理站臨櫃：身分證＋駕照正本＋2吋照片1張＋規費 NT$250，現場核發，效期1年<br>
+        <strong>② NAATI 翻譯本（可線上辦，抵達前寄到）</strong> — 線上認證翻譯社（如 ntranslation.com.au、dltr.com.au）上傳駕照掃描，AUD $30-50，效期跟著台灣駕照走，數位 PDF 手機出示即可，部分租車公司甚至更愛認這個<br><br>
+        <strong>⚠️ 不論哪一種，租車現場都要跟台灣駕照正本一起出示</strong>，缺台灣駕照正本兩者都無效！
+      </div>
+      <div class="info-box info-warn">
+        <div class="info-box-title">🚗 自駕重點規則</div>
+        <ul>
+          <li>靠左行駛，圓環讓右方來車</li>
+          <li>測速相機極多，罰單會寄到租車公司再轉你（+手續費）</li>
+          <li>酒駕標準 0.05，比台灣嚴</li>
+          <li>墨爾本市區有電車專用道和 Hook Turn（右轉要靠左等），CBD 開車注意</li>
+          <li>清晨傍晚郊區注意袋鼠</li>
+        </ul>
+      </div>
+      <div class="info-box info-tip">
+        <div class="info-box-title">💳 付款習慣</div>
+        澳洲幾乎<strong>全刷卡</strong>（感應支付普及，Apple Pay 通用），但備少量現金：鵜鶘餵食樂捐、市集小攤、國家公園自助繳費可能用到。
+      </div>
+      <div class="info-box info-tip">
+        <div class="info-box-title">💡 電子簽證（ETA）</div>
+        台灣護照可申請 Australian ETA（Subclass 601），在 Australian ETA App 辦理，AUD $20 手續費，通常即時核准。
+      </div>
+      <div class="info-box info-tip">
+        <div class="info-box-title">💡 時差注意</div>
+        西澳（珀斯）UTC+8 與台灣相同，無時差。維多利亞（墨爾本）10月為夏令時間 UTC+11，比台灣快3小時。
+      </div>
+      <div class="info-box info-nearby">
+        <div class="info-box-title">📱 推薦 App</div>
+        <ul>
+          <li><strong>Google Maps</strong> — 離線地圖先下載好</li>
+          <li><strong>Australian ETA</strong> — 電子簽證</li>
+          <li><strong>PTV</strong> — 墨爾本大眾運輸</li>
+          <li><strong>Myki</strong> — 墨爾本交通卡（機場取）</li>
+          <li><strong>GasBuddy</strong> — 找最便宜加油站</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end summary -->
+
+
+<!-- ===================== EXPENSE TRACKER ===================== -->
+<div id="expense" class="trip-section">
+  <div class="section-hero" style="background:linear-gradient(135deg,#4A2E8C,#7B5EA7);">
+    <div class="section-hero-inner">
+      <div class="section-hero-eyebrow">Expense Tracker</div>
+      <div class="section-hero-title">旅費記帳</div>
+      <div class="section-hero-dates">分幣別 · 三人分帳 · 資料儲存在此裝置瀏覽器</div>
+    </div>
+    <div class="section-hero-icon">💸</div>
+  </div>
+
+  <style>
+    .exp-card{background:var(--white);border:1px solid var(--border);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+    .exp-card-head{padding:12px 16px;font-weight:600;font-size:13px;background:var(--sand);border-bottom:1px solid var(--border);}
+    .exp-card-body{padding:14px 16px;}
+    .exp-input,.exp-select{border:1px solid var(--border);border-radius:8px;padding:9px 10px;font-size:14px;font-family:'Inter',sans-serif;background:#fff;color:var(--warm-dark);}
+    .exp-input:focus,.exp-select:focus{outline:2px solid var(--dusk);border-color:var(--dusk);}
+    .exp-grid{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+    .exp-btn{background:var(--dusk);color:#fff;border:none;border-radius:8px;padding:12px 18px;font-size:14px;font-weight:600;cursor:pointer;width:100%;}
+    .exp-btn:active{opacity:0.85;}
+    .exp-chip{display:inline-flex;align-items:center;padding:6px 14px;border:1px solid var(--border);border-radius:20px;font-size:13px;cursor:pointer;user-select:none;margin:2px;}
+    .exp-chip.on{background:var(--dusk-light);border-color:var(--dusk);color:var(--dusk);font-weight:600;}
+    .exp-item{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:10px 0;border-bottom:1px solid var(--border);}
+    .exp-item:last-child{border-bottom:none;}
+    .exp-del{background:none;border:none;font-size:15px;cursor:pointer;padding:2px 4px;opacity:0.6;}
+    .exp-total-num{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;}
+  </style>
+
+  <div class="exp-card" id="expCloudCard">
+    <div class="exp-card-head">☁️ 共享帳本同步（Google Apps Script）</div>
+    <div class="exp-card-body" id="expCloudBody"></div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-card-head">💱 匯率與總覽</div>
+    <div class="exp-card-body">
+      <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:14px;margin-bottom:12px;">
+        1 AUD = <input type="number" id="expRate" class="exp-input" style="width:80px;" step="0.1" onchange="expRateChange()"> TWD
+        <span style="font-size:11px;color:var(--mid);">（可依當日匯率調整）</span>
+      </div>
+      <div id="expTotals" style="display:flex;gap:10px;flex-wrap:wrap;"></div>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-card-head">➕ 新增支出</div>
+    <div class="exp-card-body">
+      <div class="exp-grid">
+        <input type="date" id="expDate" class="exp-input" style="flex:1;min-width:130px;">
+        <input type="text" id="expDesc" class="exp-input" placeholder="項目（例：Little Creatures 晚餐）" style="flex:2;min-width:160px;">
+      </div>
+      <div class="exp-grid">
+        <input type="number" id="expAmt" class="exp-input" placeholder="金額" style="flex:1;min-width:100px;" step="0.01" inputmode="decimal">
+        <select id="expCur" class="exp-select" style="flex:1;">
+          <option value="AUD">AUD 澳幣</option>
+          <option value="TWD">TWD 台幣</option>
+        </select>
+        <select id="expCat" class="exp-select" style="flex:1;">
+          <option>🍽️ 餐飲</option><option>🚗 交通</option><option>🏠 住宿</option>
+          <option>🎯 活動</option><option>🛍️ 購物</option><option>📦 其他</option>
+        </select>
+      </div>
+      <div class="exp-grid" style="align-items:center;">
+        <span style="font-size:13px;color:var(--mid);">付款人：</span>
+        <select id="expPayer" class="exp-select" style="flex:1;"></select>
+      </div>
+      <div class="exp-grid" style="align-items:center;">
+        <span style="font-size:13px;color:var(--mid);">分攤者：</span>
+        <span id="expSplitChips"></span>
+      </div>
+      <button class="exp-btn" onclick="expAdd()">＋ 記一筆</button>
+    </div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-card-head">⚖️ 個人結餘（正數 = 應收回）</div>
+    <div class="exp-card-body" id="expBalances"></div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-card-head">🤝 結算建議（以台幣計，AUD 依上方匯率換算）</div>
+    <div class="exp-card-body" id="expSettle"></div>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-card-head">📒 支出明細</div>
+    <div class="exp-card-body" id="expList"></div>
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<div class="footer">
+  製作於 2026 · Wiwi &amp; Team · 伯斯 + 墨爾本 18日行程<br>
+  <span style="font-size:10px;opacity:0.5;">build 2026-08-08 04:09</span>
+</div>
+
+<script>
+function switchSection(id, btn) {
+  document.querySelectorAll('.trip-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function toggleDay(header) {
+  const card = header.parentElement;
+  card.classList.toggle('open');
+}
+
+// ===== Expense Tracker =====
+const EXP_PEOPLE = ['Wiwi','cjy','Marsfish'];
+const EXP_NAME_MIGRATE = {'Chi Wei':'Wiwi','Wei Cheng':'Marsfish','Ching Yi':'cjy'};
+function expApplyNameMigration(items){
+  (items||[]).forEach(it=>{
+    if(EXP_NAME_MIGRATE[it.payer]) it.payer = EXP_NAME_MIGRATE[it.payer];
+    if(Array.isArray(it.split)) it.split = it.split.map(p=>EXP_NAME_MIGRATE[p]||p);
+  });
+  return items;
+}
+const EXP_KEY='aus2026_exp', EXP_RK='aus2026_rate';
+let expData=[], expRate=20.5;
+
+function expLoad(){
+  try{ expData=JSON.parse(localStorage.getItem(EXP_KEY))||[]; }catch(e){ expData=[]; }
+  try{ const r=parseFloat(localStorage.getItem(EXP_RK)); if(r>0)expRate=r; }catch(e){}
+  expApplyNameMigration(expData);
+  expSave();
+}
+function expSave(){
+  try{ localStorage.setItem(EXP_KEY,JSON.stringify(expData)); localStorage.setItem(EXP_RK,String(expRate)); }catch(e){}
+}
+function expFmt(v,cur){ return cur==='TWD' ? 'TWD '+Math.round(v).toLocaleString() : 'AUD $'+v.toFixed(2); }
+function expRateChange(){ const v=parseFloat(document.getElementById('expRate').value); if(v>0){expRate=v; expSave(); expRender();} }
+function expInitUI(){
+  document.getElementById('expRate').value=expRate;
+  document.getElementById('expDate').value=new Date().toISOString().slice(0,10);
+  document.getElementById('expPayer').innerHTML=EXP_PEOPLE.map(p=>'<option>'+p+'</option>').join('');
+  document.getElementById('expSplitChips').innerHTML=EXP_PEOPLE.map(p=>
+    '<span class="exp-chip on" data-p="'+p+'" onclick="this.classList.toggle(\'on\')">'+p+'</span>').join('');
+}
+function expAdd(){
+  const date=document.getElementById('expDate').value;
+  const desc=document.getElementById('expDesc').value.trim();
+  const amt=parseFloat(document.getElementById('expAmt').value);
+  const cur=document.getElementById('expCur').value;
+  const cat=document.getElementById('expCat').value;
+  const payer=document.getElementById('expPayer').value;
+  const split=[...document.querySelectorAll('#expSplitChips .exp-chip.on')].map(c=>c.dataset.p);
+  if(!desc||!(amt>0)){ alert('請填寫項目與金額'); return; }
+  if(split.length===0){ alert('至少選一位分攤者'); return; }
+  expData.push({id:Date.now(),date,desc,amt,cur,cat,payer,split});
+  expSave();
+  document.getElementById('expDesc').value=''; document.getElementById('expAmt').value='';
+  expRender();
+  if(ROOM) expCloudPush();
+}
+function expDel(id){
+  if(confirm('刪除這筆記錄？')){
+    expData=expData.filter(e=>e.id!==id);
+    expDeleted.push(id);
+    expSave(); expSaveDeleted();
+    expRender();
+    if(ROOM) expCloudPush();
+  }
+}
+function expRender(){
+  const tot={TWD:0,AUD:0};
+  expData.forEach(e=>tot[e.cur]+=e.amt);
+  const twdEq=tot.TWD+tot.AUD*expRate;
+  document.getElementById('expTotals').innerHTML=
+    '<div style="flex:1;min-width:95px;background:var(--dusk-light);border-radius:10px;padding:10px 12px;">'+
+      '<div style="font-size:11px;color:var(--dusk);">AUD 支出</div>'+
+      '<div class="exp-total-num" style="color:var(--dusk);">$'+tot.AUD.toFixed(2)+'</div></div>'+
+    '<div style="flex:1;min-width:95px;background:var(--ocean-light);border-radius:10px;padding:10px 12px;">'+
+      '<div style="font-size:11px;color:var(--ocean);">TWD 支出</div>'+
+      '<div class="exp-total-num" style="color:var(--ocean);">'+Math.round(tot.TWD).toLocaleString()+'</div></div>'+
+    '<div style="flex:1.2;min-width:115px;background:var(--coral-light);border-radius:10px;padding:10px 12px;">'+
+      '<div style="font-size:11px;color:var(--coral);">合計（TWD 換算）</div>'+
+      '<div class="exp-total-num" style="color:var(--coral);">'+Math.round(twdEq).toLocaleString()+'</div></div>';
+
+  const net={}, paid={};
+  EXP_PEOPLE.forEach(p=>{net[p]=0;paid[p]={TWD:0,AUD:0};});
+  expData.forEach(e=>{
+    const eq=e.cur==='AUD'?e.amt*expRate:e.amt;
+    paid[e.payer][e.cur]+=e.amt; net[e.payer]+=eq;
+    const per=eq/e.split.length;
+    e.split.forEach(p=>{ net[p]-=per; });
+  });
+  document.getElementById('expBalances').innerHTML=EXP_PEOPLE.map(p=>{
+    const v=net[p], col=v>0.5?'#1B5E35':(v<-0.5?'#A03010':'var(--mid)');
+    return '<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;">'+
+      '<div><strong>'+p+'</strong><div style="font-size:11px;color:var(--mid);">已付 AUD $'+paid[p].AUD.toFixed(2)+'＋TWD '+Math.round(paid[p].TWD).toLocaleString()+'</div></div>'+
+      '<div style="text-align:right;font-weight:700;color:'+col+';">'+(v>=0?'+':'')+Math.round(v).toLocaleString()+' TWD</div></div>';
+  }).join('');
+
+  const cr=[],db=[];
+  EXP_PEOPLE.forEach(p=>{ if(net[p]>0.5)cr.push({p,v:net[p]}); else if(net[p]<-0.5)db.push({p,v:-net[p]}); });
+  cr.sort((a,b)=>b.v-a.v); db.sort((a,b)=>b.v-a.v);
+  const st=[]; let i=0,j=0;
+  while(i<db.length&&j<cr.length){
+    const a=Math.min(db[i].v,cr[j].v);
+    st.push('<div style="padding:8px 10px;background:var(--sand);border-radius:8px;margin-bottom:6px;font-size:13px;">💸 <strong>'+db[i].p+'</strong> 給 <strong>'+cr[j].p+'</strong>：TWD '+Math.round(a).toLocaleString()+'</div>');
+    db[i].v-=a; cr[j].v-=a;
+    if(db[i].v<0.5)i++; if(cr[j].v<0.5)j++;
+  }
+  document.getElementById('expSettle').innerHTML=st.length?st.join(''):'<div style="font-size:13px;color:var(--mid);">目前平帳，無需結算 🎉</div>';
+
+  const sorted=[...expData].sort((a,b)=>(b.date+b.id).localeCompare(a.date+a.id));
+  document.getElementById('expList').innerHTML=sorted.length?sorted.map(e=>
+    '<div class="exp-item"><div style="flex:1;">'+
+      '<div style="font-size:14px;font-weight:600;">'+e.cat.split(' ')[0]+' '+e.desc+'</div>'+
+      '<div style="font-size:11px;color:var(--mid);">'+e.date+'｜'+e.payer+' 付款｜'+e.split.join('、')+' 分攤</div></div>'+
+    '<div style="text-align:right;"><div style="font-weight:700;font-size:14px;">'+expFmt(e.amt,e.cur)+'</div>'+
+      '<button class="exp-del" onclick="expDel('+e.id+')">🗑</button></div></div>').join('')
+    :'<div style="font-size:13px;color:var(--mid);">還沒有記錄，開始記帳吧！第一筆可以記今天的晚餐 😊</div>';
+}
+const EXP_SEED=[
+  {sid:'accom_fremantle', desc:'費里曼特 Airbnb ×2晚（Michael）', amt:12654, cur:'TWD', cat:'🏠 住宿'},
+  {sid:'accom_geraldton', desc:'傑拉爾頓 Booking ×1晚', amt:5897, cur:'TWD', cat:'🏠 住宿'},
+  {sid:'accom_southperth', desc:'南珀斯 Airbnb ×2晚（Rami）', amt:13410, cur:'TWD', cat:'🏠 住宿'},
+  {sid:'accom_mel_sammi', desc:'墨爾本 Airbnb ×3晚（Sammi）', amt:16768, cur:'TWD', cat:'🏠 住宿'},
+  {sid:'accom_apollobay', desc:'阿波羅灣 Booking ×1晚', amt:6050, cur:'TWD', cat:'🏠 住宿'},
+  {sid:'accom_portcampbell', desc:'坎貝爾港 Booking ×1晚', amt:6690, cur:'TWD', cat:'🏠 住宿'},
+  {sid:'accom_hallsgap', desc:'格蘭屏 Halls Gap Booking ×2晚', amt:7772, cur:'TWD', cat:'🏠 住宿'},
+  {sid:'accom_mel_joshua', desc:'墨爾本 Airbnb ×3晚（Joshua）', amt:18961, cur:'TWD', cat:'🏠 住宿'},
+  {sid:'car_perth', desc:'租車①：珀斯機場取還車', amt:9477, cur:'TWD', cat:'🚗 交通'},
+  {sid:'car_mel', desc:'租車②：墨爾本市區', amt:14340, cur:'TWD', cat:'🚗 交通'},
+  {sid:'ferry_rottnest', desc:'羅特尼斯島渡輪 來回×3人', amt:180, cur:'AUD', cat:'🚗 交通'},
+  {sid:'flight_all', desc:'機票 台北⇄珀斯⇄墨爾本⇄台北（Marsfish現金已還，只算 Wiwi/cjy）', amt:51504, cur:'TWD', cat:'🚗 交通', split:['Wiwi','cjy']},
+  {sid:'bike_rottnest', desc:'羅特尼斯島電動腳踏車 ×3', amt:255, cur:'AUD', cat:'🎯 活動'},
+  {sid:'sealion_jurien', desc:'Jurien Bay 海獅共游 ×3人', amt:568.88, cur:'AUD', cat:'🎯 活動'},
+];
+function expEnsureSeed(){
+  let changed=false;
+  const today=document.getElementById('expDate').value;
+  EXP_SEED.forEach(s=>{
+    let existing = expData.find(e=>e.sid===s.sid || e.desc===s.desc);
+    if(existing){
+      if(!existing.sid){ existing.sid=s.sid; changed=true; }
+    } else {
+      expData.push({id:Date.now()+Math.random(), sid:s.sid, date:today, desc:s.desc, amt:s.amt, cur:s.cur, cat:s.cat, payer:'Wiwi', split:s.split||[...EXP_PEOPLE]});
+      changed=true;
+    }
+  });
+  if(changed) expSave();
+}
+document.addEventListener('DOMContentLoaded', function(){});
+// ===== Cloud Sync (Google Apps Script Web App backend) =====
+const GAS_DEFAULT_URL = 'https://script.google.com/macros/s/AKfycbzZ3WuSHv4-1qvFtRjceI7oc5nDR6ov2WDbrb8ARaxkCBYBUvykNIuWx4gOfaK-h6aH/exec';
+let GAS_URL = null;
+let expDeleted = [];
+const EXP_DKEY = 'aus2026_deleted';
+const EXP_GKEY = 'aus2026_gasurl';
+
+function expLoadDeleted(){
+  try{ expDeleted = JSON.parse(localStorage.getItem(EXP_DKEY)) || []; }catch(e){ expDeleted = []; }
+}
+function expSaveDeleted(){
+  try{ localStorage.setItem(EXP_DKEY, JSON.stringify(expDeleted)); }catch(e){}
+}
+function expGetGasFromUrl(){
+  try{ const v=new URLSearchParams(window.location.search).get('gas'); return v?decodeURIComponent(v):null; }catch(e){ return null; }
+}
+function expCloudCard(html){
+  const el = document.getElementById('expCloudBody');
+  if(el) el.innerHTML = html;
+}
+function expShowDisconnected(){
+  expCloudCard(
+    '<div style="font-size:13px;color:var(--mid);margin-bottom:10px;">還沒連上共享帳本。請先依「雲端記帳設定步驟.md」部署一個 Google Apps Script（3分鐘，只需一人做一次），再把網址貼在這裡：</div>'+
+    '<div class="exp-grid"><input type="text" id="expGasInput" class="exp-input" placeholder="貼上 Apps Script 網址（結尾 /exec）" style="flex:1;min-width:200px;"></div>'+
+    '<button class="exp-btn" onclick="expCloudConnect(event)">🔗 連線</button>'
+  );
+}
+function expShowConnected(){
+  const url = window.location.origin + window.location.pathname + '?gas=' + encodeURIComponent(GAS_URL);
+  expCloudCard(
+    '<div style="display:flex;align-items:center;gap:6px;font-size:13px;margin-bottom:8px;">'+
+      '<span style="width:8px;height:8px;border-radius:50%;background:#1B5E35;display:inline-block;"></span>'+
+      '<strong>已連線共享帳本</strong></div>'+
+    '<div class="exp-grid">'+
+      '<input type="text" id="expShareUrl" class="exp-input" style="flex:1;min-width:160px;" readonly value="'+url+'">'+
+      '<button class="exp-btn" style="width:auto;padding:9px 14px;" onclick="expCopyShare()">複製連結</button></div>'+
+    '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;">'+
+      '<span id="expSyncStatus" style="font-size:11px;color:var(--mid);">尚未同步</span>'+
+      '<button class="exp-btn" style="width:auto;padding:8px 14px;" onclick="expCloudPull(true)">🔄 立即同步</button></div>'+
+    '<div style="margin-top:8px;text-align:right;"><a href="#" onclick="expCloudDisconnect();return false;" style="font-size:11px;color:var(--mid);">中斷連線</a></div>'
+  );
+}
+function expCopyShare(){
+  const inp = document.getElementById('expShareUrl');
+  inp.select(); inp.setSelectionRange(0,999);
+  try{ document.execCommand('copy'); }catch(e){}
+  try{ navigator.clipboard && navigator.clipboard.writeText(inp.value); }catch(e){}
+  alert('連結已複製，傳給朋友吧！');
+}
+function expSetSyncStatus(msg){
+  const el = document.getElementById('expSyncStatus');
+  if(el) el.textContent = msg;
+}
+function expCloudDisconnect(){
+  if(!confirm('中斷雲端連線？（本機資料會保留，但不會再同步）')) return;
+  GAS_URL = null;
+  localStorage.removeItem(EXP_GKEY);
+  if(expPollTimer) clearInterval(expPollTimer);
+  history.replaceState(null, '', window.location.pathname);
+  expShowDisconnected();
+}
+async function expCloudConnect(evt){
+  const inp = document.getElementById('expGasInput');
+  const url = inp ? inp.value.trim() : '';
+  if(!url || url.indexOf('script.google.com')===-1){ alert('請貼上正確的 Apps Script 網址（包含 script.google.com，結尾 /exec）'); return; }
+  GAS_URL = url;
+  expEnsureSeed();
+  const btn = (evt && evt.target) ? evt.target : null;
+  if(btn){ btn.textContent='連線中...'; btn.disabled=true; }
+  try{
+    const testRes = await fetch(GAS_URL, { method:'GET' });
+    const testText = await testRes.text();
+    let testJson;
+    try{ testJson = JSON.parse(testText); }catch(parseErr){
+      throw new Error('回應不是 JSON，可能是權限問題。伺服器回傳前 100 字：「'+testText.slice(0,100)+'」');
+    }
+    await expCloudPush();
+    localStorage.setItem(EXP_GKEY, GAS_URL);
+    history.replaceState(null, '', window.location.pathname + '?gas=' + encodeURIComponent(GAS_URL));
+    expShowConnected();
+    expSetSyncStatus('已連線，剛剛同步');
+    expStartPolling();
+  }catch(e){
+    alert('連線失敗：\n\n'+e.message+'\n\n請檢查：\n1. 網址是否為部署後的 /exec 網址（不是編輯器網址）\n2. 部署時「誰可以存取」是否選了「所有人」\n3. 是否完成 Google 授權步驟');
+    if(btn){ btn.textContent='🔗 連線'; btn.disabled=false; }
+  }
+}
+function expMergeState(remote){
+  const remoteItems = expApplyNameMigration((remote && remote.items) || []);
+  const remoteDeleted = (remote && remote.deleted) || [];
+  const delSet = new Set([...(expDeleted||[]), ...remoteDeleted]);
+  const map = new Map();
+  remoteItems.forEach(x=>{ if(!delSet.has(x.id)) map.set(x.id, x); });
+  expData.forEach(x=>{ if(!delSet.has(x.id)) map.set(x.id, x); });
+  expData = [...map.values()];
+  expDeleted = [...delSet];
+  expSave(); expSaveDeleted();
+}
+async function expCloudPull(manual){
+  if(!GAS_URL) return;
+  try{
+    const res = await fetch(GAS_URL, { method:'GET' });
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const remote = await res.json();
+    expMergeState(remote);
+    expRender();
+    expSetSyncStatus('最後同步：'+new Date().toLocaleTimeString('zh-TW',{hour12:false}));
+  }catch(e){
+    expSetSyncStatus(manual ? '同步失敗，請檢查網址與網路' : '（離線，顯示本機資料）');
+  }
+}
+async function expCloudPush(){
+  if(!GAS_URL) return;
+  try{
+    const res = await fetch(GAS_URL, { method:'GET' });
+    if(res.ok){ const remote = await res.json(); expMergeState(remote); }
+  }catch(e){}
+  const payload = JSON.stringify({ items: expData, deleted: expDeleted, updatedAt: Date.now() });
+  const res2 = await fetch(GAS_URL, {
+    method:'POST',
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body: payload
+  });
+  if(!res2.ok) throw new Error('HTTP '+res2.status);
+  expSetSyncStatus('最後同步：'+new Date().toLocaleTimeString('zh-TW',{hour12:false}));
+  expRender();
+}
+let expPollTimer=null;
+function expStartPolling(){
+  if(expPollTimer) clearInterval(expPollTimer);
+  expPollTimer = setInterval(()=>{ if(document.visibilityState==='visible') expCloudPull(false); }, 20000);
+  document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='visible' && GAS_URL) expCloudPull(false); });
+}
+async function expCloudInit(){
+  expLoadDeleted();
+  try{
+    expEnsureSeed();
+  }catch(seedErr){
+    console.error('expEnsureSeed error:', seedErr);
+    alert('補資料時發生錯誤：' + seedErr.message);
+  }
+  const urlGas = expGetGasFromUrl();
+  const savedGas = localStorage.getItem(EXP_GKEY);
+  GAS_URL = urlGas || savedGas || GAS_DEFAULT_URL || null;
+  if(GAS_URL){
+    localStorage.setItem(EXP_GKEY, GAS_URL);
+    if(!urlGas){ history.replaceState(null,'', window.location.pathname + '?gas=' + encodeURIComponent(GAS_URL)); }
+    expShowConnected();
+    try{ await expCloudPull(true); }catch(e){ expSetSyncStatus('同步失敗，顯示本機資料'); }
+    try{ await expCloudPush(); }catch(e){ expSetSyncStatus('上傳失敗，顯示本機資料'); }
+    expStartPolling();
+  } else {
+    expShowDisconnected();
+  }
+  expRender();
+  console.log('expData items after init:', expData.length, expData);
+}
+
+expLoad();
+expInitUI();
+expCloudInit().catch(function(err){
+  console.error('expCloudInit fatal error:', err);
+  alert('初始化發生錯誤：' + err.message);
+  expRender();
+});
+</script>
+</body>
+</html>
