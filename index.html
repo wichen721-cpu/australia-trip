@@ -2397,7 +2397,10 @@
   </div>
 
   <div class="exp-card">
-    <div class="exp-card-head">📒 支出明細</div>
+    <div class="exp-card-head" style="display:flex;justify-content:space-between;align-items:center;">
+      <span>📒 支出明細</span>
+      <button style="background:none;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;cursor:pointer;color:var(--mid);" onclick="expDedupeNow()">🧹 清除重複</button>
+    </div>
     <div class="exp-card-body" id="expList"></div>
   </div>
 </div>
@@ -2647,16 +2650,28 @@ async function expCloudConnect(evt){
     if(btn){ btn.textContent='🔗 連線'; btn.disabled=false; }
   }
 }
+function expDedupeKey(x){ return x.sid ? ('sid:'+x.sid) : ('id:'+x.id); }
 function expMergeState(remote){
   const remoteItems = expApplyNameMigration((remote && remote.items) || []);
   const remoteDeleted = (remote && remote.deleted) || [];
   const delSet = new Set([...(expDeleted||[]), ...remoteDeleted]);
   const map = new Map();
-  remoteItems.forEach(x=>{ if(!delSet.has(x.id)) map.set(x.id, x); });
-  expData.forEach(x=>{ if(!delSet.has(x.id)) map.set(x.id, x); });
+  remoteItems.forEach(x=>{ if(!delSet.has(x.id)) map.set(expDedupeKey(x), x); });
+  expData.forEach(x=>{ if(!delSet.has(x.id)) map.set(expDedupeKey(x), x); });
   expData = [...map.values()];
   expDeleted = [...delSet];
   expSave(); expSaveDeleted();
+}
+function expDedupeNow(){
+  const map = new Map();
+  expData.forEach(x=>{ map.set(expDedupeKey(x), x); });
+  const before = expData.length;
+  expData = [...map.values()];
+  const removed = before - expData.length;
+  expSave();
+  expRender();
+  if(GAS_URL){ expCloudPush().catch(function(){}); }
+  alert(removed>0 ? ('清除了 '+removed+' 筆重複資料！') : '沒有發現重複資料，帳目是乾淨的。');
 }
 async function expCloudPull(manual){
   if(!GAS_URL) return;
