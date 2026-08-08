@@ -2382,7 +2382,15 @@
         <span style="font-size:13px;color:var(--mid);">分攤者：</span>
         <span id="expSplitChips"></span>
       </div>
-      <button class="exp-btn" onclick="expAdd()">＋ 記一筆</button>
+      <div class="exp-grid" style="align-items:center;">
+        <span style="font-size:13px;color:var(--mid);">🧾 收據：</span>
+        <input type="file" id="expReceiptFile" accept="image/*" style="flex:1;font-size:12px;" onchange="expReceiptPreview()">
+      </div>
+      <div id="expReceiptPreviewBox" style="display:none;margin-bottom:8px;">
+        <img id="expReceiptPreviewImg" style="max-height:80px;border-radius:6px;border:1px solid var(--border);">
+        <button onclick="expClearReceipt()" style="background:none;border:none;color:var(--coral);font-size:11px;cursor:pointer;">移除</button>
+      </div>
+      <button class="exp-btn" id="expAddBtn" onclick="expAdd()">＋ 記一筆</button>
     </div>
   </div>
 
@@ -2456,7 +2464,39 @@ function expInitUI(){
   document.getElementById('expSplitChips').innerHTML=EXP_PEOPLE.map(p=>
     '<span class="exp-chip on" data-p="'+p+'" onclick="this.classList.toggle(\'on\')">'+p+'</span>').join('');
 }
-function expAdd(){
+function expReceiptPreview(){
+  const fileInput = document.getElementById('expReceiptFile');
+  const file = fileInput && fileInput.files && fileInput.files[0];
+  const box = document.getElementById('expReceiptPreviewBox');
+  const img = document.getElementById('expReceiptPreviewImg');
+  if(!file){ box.style.display='none'; return; }
+  const reader = new FileReader();
+  reader.onload = function(){ img.src = reader.result; box.style.display='block'; };
+  reader.readAsDataURL(file);
+}
+function expClearReceipt(){
+  const fileInput = document.getElementById('expReceiptFile');
+  if(fileInput) fileInput.value='';
+  document.getElementById('expReceiptPreviewBox').style.display='none';
+}
+function expFileToBase64(file){
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onload = function(){ resolve(reader.result.split(',')[1]); };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+async function expUploadReceipt(file){
+  const base64 = await expFileToBase64(file);
+  const payload = JSON.stringify({ action:'uploadImage', filename:file.name, mimeType:file.type||'image/jpeg', data:base64 });
+  const res = await fetch(GAS_URL, { method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:payload });
+  if(!res.ok) throw new Error('HTTP '+res.status);
+  const json = await res.json();
+  if(!json.ok) throw new Error(json.error || '上傳失敗，請確認 Apps Script 已更新支援收據上傳');
+  return json.url;
+}
+async function expAdd(){
   const date=document.getElementById('expDate').value;
   const desc=document.getElementById('expDesc').value.trim();
   const amt=parseFloat(document.getElementById('expAmt').value);
@@ -2466,9 +2506,28 @@ function expAdd(){
   const split=[...document.querySelectorAll('#expSplitChips .exp-chip.on')].map(c=>c.dataset.p);
   if(!desc||!(amt>0)){ alert('請填寫項目與金額'); return; }
   if(split.length===0){ alert('至少選一位分攤者'); return; }
-  expData.push({id:Date.now(),date,desc,amt,cur,cat,payer,split});
+
+  const fileInput = document.getElementById('expReceiptFile');
+  const file = fileInput && fileInput.files && fileInput.files[0];
+  let receiptUrl = null;
+  const addBtn = document.getElementById('expAddBtn');
+
+  if(file && GAS_URL){
+    if(addBtn){ addBtn.textContent='上傳收據中...'; addBtn.disabled=true; }
+    try{
+      receiptUrl = await expUploadReceipt(file);
+    }catch(err){
+      alert('收據上傳失敗：'+err.message+'\n（支出仍會記錄，只是沒有收據圖片）');
+    }
+    if(addBtn){ addBtn.textContent='＋ 記一筆'; addBtn.disabled=false; }
+  }
+
+  const item = {id:Date.now(),date,desc,amt,cur,cat,payer,split};
+  if(receiptUrl) item.receipt = receiptUrl;
+  expData.push(item);
   expSave();
   document.getElementById('expDesc').value=''; document.getElementById('expAmt').value='';
+  expClearReceipt();
   expRender();
   if(GAS_URL) expCloudPush();
 }
@@ -2529,8 +2588,10 @@ function expRender(){
       '<div style="font-size:14px;font-weight:600;">'+e.cat.split(' ')[0]+' '+e.desc+'</div>'+
       '<div style="font-size:11px;color:var(--mid);">'+e.date+'｜'+e.payer+' 付款｜'+e.split.join('、')+' 分攤</div></div>'+
     '<div style="text-align:right;"><div style="font-weight:700;font-size:14px;">'+expFmt(e.amt,e.cur)+'</div>'+
+      '<div style="display:flex;gap:4px;justify-content:flex-end;align-items:center;margin-top:2px;">'+
+      (e.receipt ? '<a href="'+e.receipt+'" target="_blank" style="font-size:14px;text-decoration:none;" title="查看收據">🧾</a>' : '')+
       (e.sid ? '<span title="固定項目，不可刪除" style="font-size:14px;opacity:0.4;">🔒</span>' : '<button class="exp-del" onclick="expDel('+e.id+')">🗑</button>')+
-      '</div></div>').join('')
+      '</div></div></div>').join('')
     :'<div style="font-size:13px;color:var(--mid);">還沒有記錄，開始記帳吧！第一筆可以記今天的晚餐 😊</div>';
 }
 const EXP_SEED=[
